@@ -1,5 +1,139 @@
 <html>
-<body>
-hi
-</body>
+<script src="https://code.jquery.com/jquery-1.5.1.js"
+        integrity="sha256-4uoKbKa5hKlAWnWdJM88UesxZOXEPpXD6aWbMWvns7k="
+        crossorigin="anonymous"></script>
+
+<style type="text/css">
+    body,html{min-width:800px;}
+    * { margin: 0; padding: 0; }
+    .fivecard .blind { position: absolute; top: 0; left: 0; width: 0; height: 0; line-height: 0; overflow: hidden; text-indent: -9999px; font-size: 0; }
+    .fivecard { position: relative; width: 670px;border:solid 1px pink}
+    .fivecard .column2 .rolling { position: relative; }
+    .fivecard .column2 .roll_image { position: absolute; top: 0; left: 0; width: 670px; height: 489px; border: solid 1px red; overflow: hidden; }
+    .fivecard .column2 {width: 670px; height:489px;}
+    .fivecard .column2 .box_left .roll_indexer { margin-top: 40px; }
+    .fivecard .column2 .box_left .roll_indexer span { display: block; float: left; width: 20px; height: 20px; margin-right: 6px; background: #eee;cursor:pointer}
+    .fivecard .column2 .box_left .roll_indexer span.on { background: #000; }
+    .fivecard .column2 .box_left { position: absolute; top: 66px; left: 69px; }
+    .fivecard .column2 .box_left .roll_txt { padding-top: 31px; font-family: 'Noto Sans KR 500'; font-size: 48px; line-height: 60px; letter-spacing: -0.025em; color: #000; background: url(../../../img/event/2019/0122i_fivecard/txt.png) no-repeat 2px 0; display: none; }
+    .fivecard .column2 .box_left .txt_show { display: block; }
+    .fivecard .column2 .box_left .roll_txt p { font-family: 'Noto Sans KR 300'; font-size: 16px; letter-spacing: -0.01em; line-height: 16px; margin-top: 15px; text-indent: 3px; }
+
+    .fivecard .column2 .obj_line { position: absolute; bottom: 0; left: 0; width: 670px; height: 75px; background: url(../../../img/event/2019/0122i_fivecard/line.png); }
+</style>
+<div class="fivecard">
+    <div class="column1">
+        <h1><span class="blind">5번째카드를뒤집어라</span></h1>
+    </div>
+    <div class="column2">
+        <div class="rolling">
+            <ul class="roll_image">
+                <li><img src="http://mintbb.mireene.com/img/1.png" alt=""></li>
+                <li><img src="http://mintbb.mireene.com/img/2.png" alt=""></li>
+                <li><img src="http://mintbb.mireene.com/img/3.png" alt=""></li>
+                <li><img src="http://mintbb.mireene.com/img/4.png" alt=""></li>
+            </ul>
+            <div class="box_left">
+                <div class="roll_txt txt_show">
+                    1이런저런 <br />
+                    팬다상자
+                    <p>1.31 점검 후 ~ 2.21 점검 전</p>
+                </div>
+                <div class="roll_txt">
+                    2이런저런 <br />
+                    팬다상자<br />
+                    오리진 상자
+                    <p>1.31 점검 후 ~ 2.21 점검 전</p>
+                </div>
+                <div class="roll_txt">
+                    3이런저런 <br />
+                    팬다상자<br />
+                    <p>1.31 점검 후 ~ 2.21 점검 전</p>
+                </div>
+                <div class="roll_txt">
+                    4이런저런 <br />
+                    팬다상자<br />
+                    오리진 상자
+                    <p>1.31 점검 후 ~ 2.21 점검 전</p>
+                </div>
+                <div class="roll_indexer">
+                    <span class="on"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <p class="obj_line"></p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    var $roll_image = $('.roll_image li');
+    var imageLength = $('.roll_image li').size();
+    var $txt_show = $('.roll_txt');
+    var $roll_indexer = $('.roll_indexer span');
+    var currentIndex = 0;
+
+    //4번 롤링 후 첫번째로 가기
+    function int_rolling() {
+        //$roll_image.hide();
+        //$roll_image.eq(0).show();
+    }
+
+    rolling();
+
+    function rolling() {
+        rollingTimes = setInterval(rollingInterval, 1000);
+    }
+
+    function rollingInterval() {
+
+        if (currentIndex == 3) {
+            $roll_indexer.removeClass('on').eq(3).addClass('on');
+            $roll_image.hide().eq(3).show();
+            $txt_show.hide().eq(3).show();
+
+            currentIndex = 0;
+
+        } else {
+            $roll_indexer.removeClass('on').eq(currentIndex).addClass('on');
+            $roll_image.hide().eq(currentIndex).show();
+            $txt_show.hide().eq(currentIndex).show();
+
+            currentIndex = currentIndex + 1;
+
+
+        }
+    }
+
+    function gotoIndex(goTo) {
+        $roll_image.hide().eq(goTo).show();
+        $txt_show.hide().eq(goTo).show();
+
+
+    }
+
+    $roll_indexer.click(function () {
+        currentIndex = $(this).index();
+        $roll_indexer.removeClass('on').eq(currentIndex).addClass('on');
+
+        gotoIndex(currentIndex);
+
+    })
+
+    $('.column2').hover(function () { clearInterval(rollingTimes); },
+    function () {
+        rolling()
+    });
+
+
+</script>
+
+
+
 </html>
