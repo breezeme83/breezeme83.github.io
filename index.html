@@ -1,4 +1,5 @@
 <html>
+<body>
 <script src="https://code.jquery.com/jquery-1.5.1.js"
         integrity="sha256-4uoKbKa5hKlAWnWdJM88UesxZOXEPpXD6aWbMWvns7k="
         crossorigin="anonymous"></script>
@@ -86,8 +87,9 @@
     }
 
     rolling();
-
+    var rollingTimes;
     function rolling() {
+        clearInterval(rollingTimes); 
         rollingTimes = setInterval(rollingInterval, 1000);
     }
 
@@ -126,14 +128,21 @@
 
     })
 
-    $('.column2').hover(function () { clearInterval(rollingTimes); },
-    function () {
-        rolling()
+    $('.column2').hover(
+        function () { 
+            console.log('h i');
+            clearInterval(rollingTimes); 
+        },
+        function () {
+            console.log('h o');
+            rolling()
     });
-
+    $('.column2').mouseleave(
+       function () {
+           console.log('mouseleave');
+       }
+    );
 
 </script>
-
-
-
+</body>
 </html>
