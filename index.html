@@ -21,6 +21,11 @@
     .fivecard .column2 .box_left .roll_txt p { font-family: 'Noto Sans KR 300'; font-size: 16px; letter-spacing: -0.01em; line-height: 16px; margin-top: 15px; text-indent: 3px; }
 
     .fivecard .column2 .obj_line { position: absolute; bottom: 0; left: 0; width: 670px; height: 75px; background: url(../../../img/event/2019/0122i_fivecard/line.png); }
+    @media (max-width: 600px) {
+  .column2  {
+    display: none;
+  }
+}
 </style>
 <div class="fivecard">
     <div class="column1">
@@ -127,21 +132,17 @@
         gotoIndex(currentIndex);
 
     })
-
+if($(window).innerWidth < 768 ){
     $('.column2').hover(
         function () { 
-            console.log('h i');
+            //console.log('h i');
             clearInterval(rollingTimes); 
         },
         function () {
-            console.log('h o');
+            //console.log('h o');
             rolling()
-    });
-    $('.column2').mouseleave(
-       function () {
-           console.log('mouseleave');
-       }
-    );
+    })
+}
 
 </script>
 </body>
