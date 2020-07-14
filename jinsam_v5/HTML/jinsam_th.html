@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty Warriors: Unleashed</title>
+    <link rel="shortcut icon" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="stylesheet" href="Contents/css/style.css">
+    <script src="Contents/js/jquery-1.12.4.min.js"></script>
+    <script src="Contents/js/jquery.localLinker.js"></script>
+    <script src="Contents/js/TweenMax.min.js"></script>
+    <script src="Contents/js/TimelineMax.min.js"></script>
+    <script src="Contents/js/swiper.jquery.min.js"></script>
+    <script src="Contents/js/ui.jinsam.js"></script>
+</head>
+<body class="th">
+    <!--gallery slider-->
+    <div class="pop_slide" id="popGallery">
+        <div class="swiper-container" id="s1">
+            <div class="layer"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+            </div>
+            <div class="swiper-indexer">
+                <!--총 이미지 갯수는 수동으로 마크업(number클래스)-->
+                <span class="active">1</span>/<span class="number">4</span>
+            </div>
+        </div>
+        <div class="wrap_swiper_bottons">
+            <div class="s1_next swiper-button-next swiper-button-white"></div>
+            <div class="s1_prev swiper-button-prev swiper-button-white"></div>
+        </div>
+    </div>
+    <!--//gallery slider-->
+    <!--movie slider-->
+    <div class="wrap_pop_slide">
+        <div class="pop_slide" id="popMovie">
+            <div class="swiper-container" id="s2">
+                <div class="layer"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_1.png" alt="" />
+                        <div class="nation1 description">
+                            <h3>วุยก๊ก (魏)</h3>
+                            <p class="ment">“ภักดีต่อองค์จักรพรรดิ<br />แล้วพระองค์จะไม่ทอดทิ้งเจ้า!”</p>
+                            <p>
+                                โจโฉเป็นผู้นำวุยก๊ก ด้วยความสามารถในการดึงดูดผู้คน,<br />
+                                หลักการบริหารนักรบชั้นยอด และกลยุทธ์ที่ฉลาดแกมโกงของเขา<br />
+                                ทำให้วุยก๊ก เป็นกองกำลังที่ยากจะต่อกร
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_2.png" alt="" />
+                        <div class="nation2 description">
+                            <h3>จ๊กก๊ก (蜀)</h3>
+                            <p class="ment">
+                                “ถึงเราจะกำเนิดต่างที่ต่างถิ่น<br />
+                                แต่เราจะขอตายไปด้วยกัน!!”
+                            </p>
+                            <p>
+                                ความเป็นน้ำหนึ่งใจเดียวและความหวังคือแรงผลักดันให้กับ จ๊กก๊ก<br />
+                                เล่าปี่ ผู้มีความเห็นอกเห็นใจ ผู้ที่พร้อมจะยืนหยัดเคียงข้าง<br />
+                                ห้าขุนพลพยัคฆ์ ทำให้ขุนพลแต่ละนายต่อสู้เทียบเท่ากับคนร้อยคน
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_3.png" alt="" />
+                        <div class="nation3 description">
+                            <h3>ง่อก๊ก (吳)</h3>
+                            <p class="ment">
+                                “สวรรค์คงไม่ประทานคนเก่งเหนือฟ้ามาให้หรอก!<br />
+                                เพียงแค่พวกเราสามารถสร้างแผ่นดินนี้ได้!”
+                            </p>
+                            <p>
+                                ง่อก๊ก คือก๊กแห่งนักรบที่เปี่ยมความสามารถและห้าวหาญ<br />
+                                เลื่องชื่อระบือไกลถึงความแข็งแกร่งแห่งทัพเรือ<br />
+                                ซุนกวน ผู้เป็นผู้นำก๊กอันมั่งคั่งนี้ มุ่งมั่นที่จะทำให้วิสัยทัศน์<br />
+                                ของบิดาและพี่ชายของเขากลายเป็นจริง
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="wrap_swiper_bottons">
+                <div class="s2_next swiper-button-next swiper-button-white"></div>
+                <div class="s2_prev swiper-button-prev swiper-button-white"></div>
+            </div>
+        </div>
+    </div>
+    <!--//movie slider-->
+    <!-- Wrap -->
+    <div id="wrap" class="en">
+        <!-- Header -->
+        <div id="header">
+            <h1><button type="button" class="logo"><img src="Contents/images/pc/logo_global.png" alt="Dynasty Warriors: Unleashed"></button></h1>
+            <div id="nav">
+                <div class="border"></div>
+                <ul class="menu locallinker">
+                    <li class="menu1 active" data-href=".section_main"><button type="button"><span class="blind">main</span></button></li>
+                    <li class="menu2" data-href=".section1"><button type="button">ลงทะเบียนล่วงหน้า</button></li>
+                    <li class="menu3" data-href=".section2"><button type="button">ชุมชน</button></li>
+                    <li class="menu4" data-href=".section3"><button type="button">เกม</button></li>
+                </ul>
+                <ul class="share">
+                    <li>
+                        <button type="button"><span class="blind">open sns list</span></button>
+                        <ul class="sns_list">
+                            <li class="facebook"><button type="button"><span class="blind">facebook</span></button></li>
+                            <li class="tweeter"><button type="button"><span class="blind">tweeter</span></button></li>
+                            <li class="instagram"><button type="button"><span class="blind">instargram</span></button></li>
+                            <li class="snapchat"><button type="button"><span class="blind">snapchat</span></button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //Header -->
+        <!-- Container -->
+        <div id="container">
+            <div class="section_main section">
+                <div class="bg_cloud"></div>
+                <div class="obj_wizard"></div>
+                <div class="inner">
+                    <h2>
+                        <span class="blind">
+                            Dynasty Warriors<br />
+                            ขีดสุดแห่ง ACTION RPG บนมือถือแห่งยุค<br />
+                            จากนวนิยายสุดอมตะ "สามก๊ก"
+                        </span>
+                    </h2>
+                    <div class="hovershow">
+                        <button type="button" class="btn_play" data-video="mMHr7vGATdo" onclick=""><img class="visible" src="Contents/images/pc/btn_mov_obj.png" alt="Play Video"></button>
+                        <p class="txt_playtrailer show-comment">เล่น VDO TRAILER</p>
+                    </div>
+                    <ul class="features">
+                        <li><span>พบกับขุนพลคนโปรดในตำนาน</span></li>
+                        <li><span>เข้าสู่มหากาพย์สงครามครั้งยิ่งใหญ่ </span></li>
+                        <li><span>สังหารข้าศึกนับหมื่น</span></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn_scroll">View Contents</button>
+                <div class="video_box">
+                    <div class="cover_layer"></div>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rzSO4BX3cJQ?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;hq=720&amp;playlist=rzSO4BX3cJQ;" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="section section1">
+                <div class="inner">
+                    <h2><strong>รับของขวัญพิเศษ สำหรับคุณ</strong></h2>
+                    <p>ไอเท็มโบนัสในเกมมูลค่า $29.99</p>
+                    <div class="image_spot"></div>
+                    <p class="comment">ขุนพล ลิโป้ / 1,000 ทอง / ซาลาเปาฟื้น AP (S) x10 / 50,000 เหรียญ</p>
+                    <!--정보입력area-->
+                    <div class="bg_registerbox">
+                        <form action="#" method="post">
+                            <fieldset>
+                                <div class="email">
+                                    <p><label for="userEmail">ที่อยู่อีเมล</label></p>
+                                    <input id="userEmail" type="email" name="name" placeholder="โปรดป้อนอีเมล">
+                                </div>
+                                <ul class="agree">
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk1" value="">
+                                        <label for="agreeChk1">
+                                            ยอมรับ <a class="comment" href="#" target="_blank">เงื่อนไขการใช้บริการ</a>แล<a class="comment" href="#" target="_blank">ะนโยบายความเ</a> ป็นส่วนตัว
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk2" value="">
+                                        <label for="agreeChk2">คลิกเพื่อรับข้อมูลอัพเดทและโปรโมชั่นสุดพิเศษทางอีเมล (คุณสามารถยกเลิกการสมัครได้ทุกเมื่อ)</label>
+
+                                    </li>
+                                </ul>
+                                <p class="comment">
+                                    ※ ในการรันเกม จำเป็นต้องใช้อุปกรณ์ที่มีประสิทธิภาพเทียบเท่าหรือสูงกว่า<br />
+                                    Galaxy S4 หรือ iphone5s (iOS 9 หรือสูงกว่า)
+                                </p>
+                                <ul class="row_2_buttons">
+                                    <li class="row_1"><button type="button" id="btnReg" class="btn_pre_register"><span>ลงทะเบียนล่วงหน้าเดี๋ยวนี้</span></button></li>
+                                    <li class="row_2"><button type="button" class="btn_google"><span class="blind">googleplay</span> <span class="google_txt">ลงทะเบียนล่วงหน้า</span></button><p class="">ลงทะเบียนล่วงหน้าที่ Google Play และรับไปเลย xx,xxx เหรียญ</p></li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--정보입력area//-->
+                </div>
+                <img src="Contents/images/pc/obj_char3.png" alt="" class="obj4">
+            </div>
+            <div class="section section2">
+                <div class="obj_girl"></div>
+                <div class="inner">
+                    <h2><strong>เข้าร่วมชุมชนของเหล่าแม่ทัพ</strong></h2>
+                    <p>เข้าร่วมและรวมตัวกับบรรดาแฟนๆ<br />Dynasty Warriors จากทั่วโลก!</p>
+                    <ul class="features">
+                        <li><span>ข่าวสารและการอัพเดทเกม</span></li>
+                        <li><span>อาร์ตเวิร์ค สุดพิเศษ</span></li>
+                        <li><span>ข้อมูลอีเวนต์และรางวัล</span></li>
+                    </ul>
+                    <!--아이프레임삽입 W400px * H300px-->
+                    <div class="ifame_area"> </div>
+                    <!--아이프레임삽입//-->
+                    <button type="button"><span>Facebook Page</span></button>
+                </div>
+
+            </div>
+            <div class="section section3">
+                <div class="obj_heroes"></div>
+                <div class="inner">
+                    <h2>
+                        <strong>
+                            DYNASTY WARRIORS<br/>
+                            เปิดศึกสงครามบนมือถือ!
+                        </strong>
+                    </h2>
+                    <p>
+                        ขุนพลในตำนานจากนวนิยาย 3 ก๊ก<br />
+                        เข้าสู่มหากาพย์สงครามครั้งยิ่งใหญ่ <br />
+                        พัฒนาอาวุธและอุปกรณ์อันทรงพลัง
+                    </p>
+                    <ul class="row_2_buttons">
+                        <li class="row_1"><button class="pop_gallery" type="button"><span>แกลเลอรี</span></button></li>
+                        <li class="row_2"><button class="pop_video" type="button"><span>VDO</span></button></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Footer -->
+            <div id="footer">
+                <div class="inner">
+                    <div class="company_logo"></div>
+                    <ul class="copyright">
+                        <li>&copy; KOEI TECMO GAMES CO., LTD. All rights reserved.</li>
+                        <li>&copy; NEXON Korea Corporation Co., Ltd. All Rights Reserved.</li>
+                        <li>&copy; XPEC Entertainment INC. All rights reserved.</li>
+                    </ul>
+                    <div class="wrap_combobox">
+                        <select class="language">
+                            <option value="">English</option>
+                            <option value="">Korean</option>
+                            <option value="">Chinese</option>
+                            <option value="">Thai</option>
+                            <option value="">French</option>
+                            <option value="">German</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- //Footer -->
+        </div>
+        <!-- //Container -->
+    </div>
+    <!-- //Wrap -->
+    <!--movie popup-->
+    <div class="movPop popup">
+        <div class="layer"></div>
+        <div class="inner">
+            <button type="button" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//movie popup-->
+    <!--popup-->
+    <div class="alertPop popup" id="alertPop">
+        <div class="layer"></div>
+        <div class="inner">
+            <p></p>
+            <button type="button" data-tohide="alertPop" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//popup-->
+</body>
+</html>

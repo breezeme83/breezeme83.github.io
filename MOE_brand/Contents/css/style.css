@@ -1,0 +1,79 @@
+﻿html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; vertical-align: top; font-family: Dotum,sans-serif; }
+body, input, textarea, select, button, table { font-size: 12px; line-height: 1.2; }
+img, fieldset, button { border: 0; vertical-align: top; }
+ul, ol, li { list-style: none; }
+em, address { font-style: normal; }
+a { text-decoration: none; }
+a:hover, a:active, a:focus { text-decoration: underline; }
+button { cursor: pointer; background-color: transparent; outline: none; }
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+hr { display: none; }
+.alphatrans_btn > img { position: absolute; cursor: pointer; }
+label:hover { cursor: pointer; }
+body, html { background: #292c37; }
+.blind { overflow: hidden; visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; font-size: 0; line-height: 0; }
+.wh0 { position: absolute; width: 0 !important; height: 0 !important; }
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
+input[type=text]::-ms-clear { display: none; }
+input:focus { outline: none; }
+/********************layout******************/
+#contents { overflow: hidden; margin: 0 auto; min-width: 1000px; }
+.section .inner { position: relative; z-index: 3; width: 1000px; margin: 0 auto; }
+.section_1 { height: 924px; position: relative; z-index: 2; background: url(../images/pc/bg_1.jpg) center 0 no-repeat; }
+.section_2 { height: 4277px; position: relative; z-index: 1; background: url(../images/pc/bg_2.jpg) center 0 no-repeat; }
+.section_3 { height: 958px; position: relative; z-index: 1; background: url(../images/pc/bg_3.jpg) center 0 no-repeat; }
+
+/****************navigation******************/
+/*navigaion*/
+#top_bar { position: fixed; top: 0; z-index: 9; width: 100%; height: 76px; background-color: rgba( 255,255,255,0.35); /* max-width: 1280px; */ }
+#top_bar h1 { float: left; width: 153px; height: 76px; margin-left: 50px; }
+#top_bar h1 a { display: inline-block; width: 100%; height: 76px; background-image: url(../images/pc/logo.png); background-size: 100% auto; }
+#top_bar ul { width: 1000px; margin: 0 auto; }
+#top_bar ul li:first-child { margin-left: 20px; }
+#top_bar ul li { float: left; height: 21px; margin: 14px 8px 0 0; }
+#top_bar ul li a { display: inline-block; width: 183px; height: 42px; background-image: url(../images/pc/m_1.png); background-size: 100% auto; background-position: 0 0; }
+#top_bar ul li a.active, #top_bar ul li.nav a:hover { background-position: 0 -100%; }
+#top_bar ul li.menu2 a { width: 220px; background-image: url(../images/pc/m_2.png); }
+#top_bar ul li.menu3 a { width: 185px; background-image: url(../images/pc/m_3.png); }
+#top_bar ul li.facebook a { display: inline-block; position: absolute; top: 13px; right: 73px; width: 50px; height: 42px; margin: 0; padding: 0; background-image: url(../images/pc/ico_fb.png); background-size: 100% auto; }
+#top_bar ul li.twitter a { display: inline-block; position: absolute; top: 13px; right: 19px; width: 54px; height: 43px; margin: 0; padding: 0; background-image: url(../images/pc/ico_tw.png); background-size: 100% auto; }
+#top_bar .wrap_top { position: relative; width: 1000px; margin: 0 auto; }
+#top_bar .wrap_top:after { display: block; clear: both; content: ''; }
+/**************************section contents**************************/
+
+/*section_1*/
+.section_1 h2 { position: relative; width: 574px; height: 521px; margin: 0 auto; background: url(../images/pc/title_main.png) no-repeat center top; }
+.section_1 .btn_play { display: block; width: 280px; height: 268px; margin: 0 auto; background-image: url(../images/pc/btn_play.png); }
+.section_2 .inner { padding-top: 86px; }
+.section_2 .wrap_features { width: 1600px; margin-left: -300px; }
+
+/*section_3*/
+.section_3 .inner { padding-top: 330px; }
+.section_3 h2 { margin: 0 auto; width: 900px; height: 157px;  }
+.section_3 a.btn_store { display: block; float: left; width: 254px; height: 79px; margin: 0 auto; margin-top: 56px; }
+.section_3 a.btn_store.s2 { float: left; margin-left: 23px; }
+.section_3 .wrap_buttons { margin-left: 59px; width: 533px; }
+
+/*footer*/
+#footer { position: relative; height: 56px; padding: 48px 0 38px; width: 1000px; margin: 0 auto; background: #292c37; }
+#footer p { position: relative; width: 600px; height: 56px; margin: 0 auto; background: #292c37 url(../images/mobile/footer.gif) no-repeat center center; background-size: 100% auto; }
+#footer a.policy { position: absolute; top: 0; left: 0; width:130px; height: 20px;}
+/**************************************************popup**********************************************************/
+/*video popup*/
+.wrap_main_video { width: 94%; max-width: 1200px; left: 50%; position: fixed; top: 15%; z-index: 1010; display: none; box-shadow: -1px 2px 32px 2px rgba(0,0,0,0.9); background: #165e59; border-radius: 20px; }
+.wrap_main_video .video { overflow: hidden; width: 100%; position: relative; z-index: 2; padding-bottom: 55.3%; border: solid 10px #165e59; border-radius: 20px; box-sizing: border-box; }
+.wrap_main_video .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #165e59; }
+.wrap_main_video .btn_close { top: -80px; right: 0; display: inline-block; position: absolute; width: 70px; height: 76px; background-image: url(../images/pc/pop_close.png); background-repeat: no-repeat; background-size: 100% auto; }
+.wrap_main_video .wrap_buttons { position: relative; z-index: 1; width: 100%; height: 100%; max-width: 1210px; }
+.wrap_main_video .wrap_buttons:after { display: block; clear: both; content: ''; }
+.wrap_main_video .wrap_buttons p { width: 106.2%; }
+.wrap_main_video .wrap_buttons p img { width: 100%; }
+.wrap_main_video .wrap_buttons button { float: left; width: 50%; }
+.wrap_main_video .wrap_buttons .btn_movie1 { margin-left: -3.1%; }
+/*video layer*/
+.popup_layer { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,0.85); z-index: 20; overflow: hidden; }
+
+/*alret popup*/
+.alertPop { display:; }
+.alertPop .msg { display: none; }
+.alertPop .popup_inner { position: fixed; z-index: 30; text-align: center; }

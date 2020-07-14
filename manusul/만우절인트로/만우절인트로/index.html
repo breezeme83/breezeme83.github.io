@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ani.css">
+    <script
+  src="http://code.jquery.com/jquery-1.8.3.js"
+  integrity="sha256-dW19+sSjW7V1Q/Z3KD1saC6NcE5TUIhLJzJbrdKzxKc="
+  crossorigin="anonymous"></script>
+  <script src="js/nestedWheelSlider.js"></script>
+  
+    <style>
+    *{margin:0;padding:0;}
+    ul,li{list-style:none;}
+    iframe{border:none;}
+    .frame{border:solid 1px}
+    #hotItem li{width:600px;height:400px;background:pink}
+    #hotItem li:nth-child(1){background:pink}
+    #hotItem li:nth-child(2){background:#eee}
+    #hotItem li:nth-child(3){background:#2e2e2e}
+    .nested-slide{position:relative;width:600px;height:400px;overflow:hidden;margin:0 auto;}
+    .nested-slide li{position:absolute;top:0;left:0;opacity:0;height:400px;transform:scale(0.8)}
+    /*현재노출되는네스티드슬라이드*/
+    .nested-slide li.on{opacity:1;transform:scale(1);transition:all .5s}
+    /*휠을아래로 내렸을때 네스티드슬라이드의 on과 함께 추가되는 애니메이션 클래스(제외:제일처음 슬라이드에서는 이 클래스가없다)*/
+    .nested-slide li.downanimation{animation:left_to_right 0.5s;}
+    /*휠을위로올렸을때 네스티드슬라이드의 on과 함께 추가되는 애니메이션 클래스*/
+    .nested-slide li.upanimation{animation:left_to_right 0.5s,fadeIn 0.8s;}
+    .contaniner{position:fixed;z-index:1;width:100%;height:100%;text-align:center;display:table;opacity:0;}
+    .frame{ position:relative;display:inline-block;display:table-cell;text-align:center;vertical-align:middle;border:solid 3px pink;width:100%;}
+    .content{border:solid 1px red;color:#000}
+    /*현재노출되는페이지*/
+    .contaniner.on{opacity:1;/*-ms-filter:"alpha(opacity=50)"; *//* For IE 8 */animation:left_to_right 0.5s;}
+    /*휠을아래로내렸을때on과 함께 추가되는 애니메이션 클래스(제외:제일 처음 노출되는 페이지에서는 이 클래스가 없다)*/
+    .contaniner.downanimation{animation:left_to_right 0.5s;}
+    /*휠을위로올렸을때on과 함께 추가되는 애니메이션 클래스*/
+    .contaniner.upanimation{animation:right_to_left 0.5s;}
+    .slidCtr{position:absolute;top:300px;left:300px;}
+    span{display:inline-block;width:50px;height:50px;border:solid 1px black}
+    span.disabled{display:none;}
+    .innercontent{width:800px;height:1000px;background:#2e2e2e;margin:0 auto;}
+    /*container에 오버사이즈레이아웃을 덮어씌우는 클래스*/
+    .contaniner.over-height-size{position:relative;}
+    h1{width:100%;height:100px;background:pink}
+    .wrap_tit div{position:relative;opacity:0;transition:all 0.5s}
+    div.ani .tit-1{animation:left_to_right 0.5s,fadeIn 0.5s;animation-fill-mode:forwards;animation-delay:0.5s;position:relative;width:400px;height:150px;margin:0 auto;background-color: aquamarine}
+    div.ani .tit-2{animation:right_to_left 0.5s,fadeIn 0.8s;animation-fill-mode:forwards;animation-delay:1s;position:relative;width:500px;margin:0 auto;height:100px;background-color: palevioletred}
+    div.ani .tit-3{animation:bottom_to_top 0.5s,fadeIn 0.8s;animation-fill-mode:forwards;animation-delay:1.5s;position:relative;width:400px;margin:0 auto;height:50px;background-color:peru}
+    div.ani .icon{width:100px;height:100px;background:plum;margin:0 auto;animation:fadeIn 0.8s;animation-delay:2s;animation-fill-mode:forwards;}
+    h2:hover{cursor: pointer;}
+    #nav{position:fixed;top:0;right:0;z-index:2;display:table;border:solid 1px;height:100%;}
+    #nav ul{display:table-cell;vertical-align: middle}
+    #nav ul li.on{background:pink}
+    @keyframes left_to_right {
+      0% {
+        opacity:0;
+        transform:translateX(30%);
+        
+      }   
+     
+      100% {
+        opacity:1;
+        transform:translateX(0);
+        
+      }
+    }
+    @keyframes right_to_left {
+        0% {
+            transform:translateX(-30%);
+            opacity:0;
+         
+      }
+      100%  {
+        transform:translateX(0);
+        opacity:1;
+        
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @keyframes bottom_to_top {
+      from {
+       transform:translateY(30%);
+      }
+      to {
+        transform:translateY(0);
+      }
+    }
+    </style>
+</head>
+
+<body>
+   <div id="nav">
+        <ul>
+            <li class="">HOME</li>
+            <li>글로벌트렌드</li>
+            <li>체험존</li>
+            <li>레이드</li>
+        </ul>
+    </div>
+    <div class="contaniner on" style="background-color:beige">
+        <div class="frame">
+            <div class="content cont-1"> 
+                <div class="wrap_tit">
+                    <div class="tit-1">
+                        CYPERS
+                    </div>
+                    <div class="tit-2">
+                       핫플레이스
+                    </div>
+                    <div class="tit-3">
+                         줄 서서 기다리는 핵 인싸 업데이트
+                    </div>
+                    <div class="icon">마우스 휠 하세용</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="contaniner slide" style="background-color:cadetblue">
+        <div class="frame" >
+            2
+            <div class="slidCtr">
+                <span class="nested-prev-btn disabled">뒤로가기</span>
+                <span class="nested-next-btn">앞으로가기</span>
+            </div>
+            <ul class="slide nested-slide" id="hotItem">
+                <li class="on">그림1</li>
+                <li>그림2</li>
+                <li>그림3</li>
+            </ul>
+        </div>
+    </div>
+    <div class="contaniner">
+            <div class="frame" >
+               <div class="movie">
+                <iframe id="player" src="https://www.youtube.com/embed/5wNAJh4NFO8?wmode=opaque&controls=0&fs=0&modestbranding=1&rel=0&showinfo=0&enablejsapi=1"></iframe>
+            </div>
+            </div>
+    </div>
+    <div class="contaniner" >
+        <div class="frame" >
+            4
+            <div class="slidCtr">
+                <span class="nested-prev-btn disabled">뒤로가기</span>
+                <span class="nested-next-btn">앞으로가기</span>
+            </div>
+            <ul class="slide nested-slide" id="hotItem">
+                <li class="on">그림1</li>
+                <li>그림2</li>
+                <li>그림3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+
+ 
+$(function() {
+    var nwSlider = $(".contaniner").nestedWheelSlider({
+        nestedSlideSelector: '.slide li',
+        transitionDelay: 200,
+        onChangeCallback: function(slideIdx, nestedIdx) {
+            //youtube
+            if(slideIdx === 2) {
+                console.log('play youtube video');
+                //플레이어 재생
+                $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+              
+            } else {
+                console.log('stop youtube video');
+                //플레이어 일시정지
+                $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+            }
+
+            //scroll
+            var $currentSlide = $(".contaniner").eq(slideIdx);
+            if ($currentSlide.height() > $(window).innerHeight()){
+                $currentSlide.addClass('over-height-size');
+            }
+
+            //nav
+            //nav 현재위치 클래스 추가
+            $('#nav li').removeClass('on').eq(slideIdx).addClass('on');
+        }
+    });
+
+    //페이지가 전부 로드 되면 첫페이지 요소에 클래스추가
+    $('.wrap_tit').addClass('ani');
+    $('#nav li').click(function(){
+        nwSlider.slideTo($(this).index());
+    })
+    //네비게이션을 클릭하면 해당페이지로 이동
+
+
+});
+</script>
+
+</html>

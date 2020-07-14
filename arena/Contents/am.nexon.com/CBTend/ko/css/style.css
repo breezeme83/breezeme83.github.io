@@ -1,0 +1,53 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; vertical-align: top; }
+body, input, textarea, select, button, table { font-size: 12px; font-family: Dotum,sans-serif; line-height: 1.2; }
+img, fieldset, button { border: 0; vertical-align: top; }
+ul, ol, li { list-style: none; }
+em, address { font-style: normal; }
+a { text-decoration: none; }
+a:hover, a:active, a:focus { text-decoration: underline; }
+button { cursor: pointer; background-color: transparent; outline: none; }
+.blind { overflow: hidden; visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; font-size: 0; line-height: 0; }
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+hr { display: none; }
+.alphatrans_btn > img { position: absolute; cursor: pointer; }
+label:hover { cursor: pointer; }
+body, html { background: #000; overflow:hidden;}
+/*VIDEO*/
+.bg_video { background-size: 100% 100%; background-color: black; background-position: center center; background-size: contain; object-fit: cover; }
+.wrap_bg_video { position: absolute; top: 0; z-index: 1; width: 2600px; height: 100%; overflow: hidden; }
+.cover_vplayer { min-width: 1618px; height: 1245px; position: relative; overflow: hidden; background: #000; }
+#vplayer { position: absolute; min-width: 1618px; z-index: 2; }
+.bg_dot { position: absolute; z-index: 10; width: 100%; height: 1618px; background: url(../images/pc/dot.png); }
+.region { position: absolute; z-index: 11; width: 100%; bottom: 0; }
+.region > img {width:100%;}
+/*MAIN*/
+.main_content{position:absolute;z-index:20;top:50%;margin-top:-350px;left:50%;height:700px;width:1024px;margin-left:-512px;}
+
+.linkbox { position: fixed; right: 4%; top: 10%; width: 8%; }
+.linkbox li { float: left; width: 50%; max-width: 91px; }
+.section_main { overflow: hidden; }
+.section_main .txt_maintitle { /*width: 52%;*/  /*position: absolute; top:9%;left:24%;z-index: 15;*/ margin-bottom:197px; }
+.section_main .under700{margin-bottom:100px !important; }
+
+.btn_eventresult { /*position: absolute; z-index: 100; top: 64%;*/ /*width: 20%;*/ /*left: 40%; margin-left: -10%; max-width: 446px;*/margin-left:127px; }
+.btn_play { /*position: absolute; z-index: 100; top: 64%;*/ /*width: 20%;*/ /*left: 60%; margin-left: -10%; max-width: 446px;*/ }
+.wrap_btn_cafe{position:absolute;top:0;z-index:15;width:1024px;left:50%;margin-left:-512px;}
+.btn_cafe{position:absolute;top:0;right:0}
+.wrap_top_bar { position: absolute; top: 0; z-index: 20; width: 100%; display: inline-block; text-align:center; font-size:0;}
+.bg_top_bar { position: absolute; top: 0; width: 100%; background: url(../images/pc/bg_top_bar.gif) repeat-x; background-size: auto 100%; z-index: 10; display: inline-block; height: 20px; }
+.top_bar { width: 80%; max-width:1200px; max-height:93px; background: url(../images/pc/bg_top_bar.gif) repeat-x; background-size: auto 100%; white-space: nowrap; display: inline-block; }
+
+
+/*video&popup*/
+.wrap_main_video { background: #000; width: 90%; max-width: 1280px; position: fixed; z-index: 1010; display: none; } 
+.wrap_main_video .video { width: 100%; position: relative; padding-bottom: 53%; /* 16:9 */ }
+.wrap_main_video .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+/*popup*/
+.wrap_centerpopup { position: fixed; z-index: 999; top: 0; display: none; }
+.shadow { width: 100%; position: fixed; top: 0; z-index: 888; height: 1500px; background: url(../images/pc/shadow.png); display: none; }
+.popup { position: absolute; top: 30%; z-index: 11; width: 100%; max-width: 1024px; background: #04b7fa; text-align: center;display:none; }
+.pop_close { position: absolute; width: 4%; top: 4.5%; right: 11%; }
+.wrap_main_video .pop_close { display: inline-block; position: absolute; width: 4%; top: -10%; right: 0.5%; }
+.wrap_main_video .pop_close img { width: 100%; }
+.notice .pop_close { top: 7%; right: 6%; }
+

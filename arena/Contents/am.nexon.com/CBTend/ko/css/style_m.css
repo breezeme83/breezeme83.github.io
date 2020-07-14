@@ -1,0 +1,47 @@
+﻿/*reset*/
+html, body, div, span, object, iframe, h1, h2, p,
+em, img, strong,
+ol, ul, li, fieldset, form, label, legend, table, td, tr, input, button { margin: 0; padding: 0; border: 0; -webkit-text-size-adjust: none; vertical-align: baseline; font-size: 100%; outline: 0; background: transparent; }
+body { background: #000; width: 100%; color: #666; font-size: 14px; font-family: '나눔고딕',NanumGothic,'맑은고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif; }
+button, label { cursor: pointer; }
+button { background-color: transparent; outline: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
+ul, ol { list-style: none; }
+h1, h2 { font-size: 100%; font-weight: normal; }
+hr { display: none; }
+a { color: inherit; }
+legend, caption { display: none; clear: both; }
+label { cursor: pointer; }
+label, input, img, a { vertical-align: baseline; border: none; }
+::-webkit-input-placeholder { color: #adb9c6; }
+.blind { display: block; overflow: hidden; position: absolute; top: -1000em; left: 0; }
+#container { position: relative; text-align: center; /*max-width: 640px;*/ min-width: 320px; margin: 0 auto; }
+img { width: 100%; display: block; }
+.section_main, .section_register, .section_event, .section_gameintro, .section_characterintro, .section_note, .bg_img { position: relative; }
+/*GNB*/
+.logo { width: 100%; top: 0; z-index: 10; }
+.section_fix { width: 100%; position: fixed; top: 0; z-index: 20; /*max-width: 640px;*/ /*min-width: 320px;*/ background: #252627; }
+.gnb li { float: left; width: 25%; }
+/*VIDEO*/
+.wrap_main_video { background: #000; width: 94%; /*max-width: 640px;*/ left: 3%; position: absolute; top: 10%; z-index: 1010; display: none; }
+.wrap_main_video .video { width: 100%; position: relative; padding-bottom: 53%; /* 16:9 */ }
+.wrap_main_video .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.wrap_v_close .pop_close { top: -25%; }
+/*MAIN*/
+.txt_maintitle{position:absolute;top:7%;width:100%;}
+
+.btn_play { position: absolute; width: 56%; top: 69%; left: 22%; }
+.btn_eventresult { position: absolute; width: 56%; top: 80%; left: 22%; }
+
+
+.btn_cafe { position: absolute; z-index:10;width: 100%;top: 0; right: 2.2%;  /*max-width:640px;*/ }
+.btn_cafe a{display:inline-block;position:fixed;right:5%;width:13%;}
+
+
+/*popup*/
+.popup { display: none; position: absolute; top: 44%; width: 94%; left: 3%; z-index: 50; }
+.pop_btn_confirm { width: 40%; top: 80%; z-index: 6; position: absolute; width: 38%; top: 54%; left: 31%; z-index: 6; display: inline-block; }
+.wrap_centerpopup { position: fixed; z-index: 999; width: 90%; display: none; max-width: 600px; }
+.pop_close { width: 10%; position: absolute; top: -12%; right: 2%; }
+.shadow { width: 100%; position: fixed; top: 0; z-index: 888; height: 1500px; background: url(../images/mobile/shadow.png); display: none; }
+

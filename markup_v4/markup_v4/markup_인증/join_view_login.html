@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<link href="css/default.css" rel="stylesheet" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>로그인-세가퍼블리싱코리아</title>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/form.js"></script>
+<script src="js/tabsLock.js"></script>
+    <script>
+        $('document').ready(function () {
+            //IE10이 아닐경우
+            if (navigator.appVersion.indexOf("MSIE 10") == -1) {
+                console.log('this is no IE');
+                $('#pw').CapsLockAlert();
+            }
+
+        })
+
+    </script>
+</head>
+<body id="jMsgbox">
+    <div class="jWrap">
+            <h1>
+                <img src="img/logo.gif" alt="세가퍼블리싱코리아" />
+            </h1> 
+        <div class="box_center_msg">
+            <div class="wrap_center_msg">
+               <div class="wrap_login">
+                   <div class="left_login">
+                       <p class="msg">
+                           <img src="img/txt_lonin_msg1.gif" alt="로그인이필요합니다-로그인후서비스를이용해주세요"/>
+                       </p>
+<!--                       <p class="msg">
+                        <img src="img/txt_lonin_msg2.gif" alt="지금접속하신아디는접속제한된아이디입니다-자세한사항은아래고객센터를통해접수부탁드립니다"/>
+                        <button type="button" title="고객센터" class="btn bt_cct"><span class="blind">고객센터</span></button>
+                       </p>-->
+<!--                       <p class="msg">
+                        <img src="img/txt_lonin_msg3.gif" alt="지금접속하신아이디는해외IP또는접속제한IP입니다-자세한사항은아래고객센터를통해접수부탁드립니다."/>
+                        <button type="button" title="고객센터" class="btn bt_cct"><span class="blind">고객센터</span></button>  
+                       </p> --> 
+<!--                       <p class="msg" >
+                       <img src="img/txt_lonin_msg4.gif" alt="3개월동안접속이없어이용이제한된아이디입니다-래제를하시려면아래제한해제버튼을클릭해주세요"/>
+                       <button type="button" title="제한해제" class="btn bt_off"><span class="blind">제한해제</span></button>
+                       </p>-->
+<!--                       <p class="msg">
+                       <img src="img/txt_lonin_msg5.gif" alt="지금접속하신아이디는탈퇴신청중인아이디입니다-탈퇴취소를하시려면아래버튼을클릭해주세요"/>
+                           <button type="button" title="탈퇴신청취소" class="btn bt_sc"><span class="blind">탈퇴신청취소</span></button>
+                       </p>-->
+<!--                       <p class="msg">
+                       <img src="img/txt_lonin_msg6.gif" alt="비밀번호를5회이상실패하여접속이제한된아이디입니다-해제를하시려면아래제한해제버튼을클릭해주세요"/>
+                        <button type="button" title="제한해제" class="btn bt_off"><span class="blind">제한해제</span></button> 
+                       </p>-->
+                       </div>
+                   <div class="right_login">
+                       <div class="wrap_form_login">
+                            <input id="login" class="login_inp id" type="text" name="name" value="" style="" />
+                            <input id="pw" class="login_inp pw mt8" type="password" name="name" value="" style="" />
+                            <div class="caps_tooptip">캡스락이 켜져있어용</div>
+                            <button type="button" title="로그인" class="btn bt_lgi"><span class="blind">로그인</span></button> 
+                            <p class="wrap_lnks"><a href="#">아이디 찾기</a><span class="sp_bar"></span><a href="#">비밀번호 찾기</a><span class="lnk_arrow" ><a href="#">신규회원가입</a></span></p>
+                        </div>
+                   </div>
+               </div>
+            </div>
+        </div>       
+        <div class="jFotter">
+            <div class="copyright"><img src="img/txt_copyright.gif" alt="copyright SEGA Publishing Korea all rights reserved." /></div>
+        </div>
+    </div>
+</body>
+</html>

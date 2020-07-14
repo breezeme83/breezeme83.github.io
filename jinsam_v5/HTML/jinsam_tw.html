@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="tw">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty Warriors: Unleashed</title>
+    <link rel="shortcut icon" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="stylesheet" href="Contents/css/style.css">
+    <script src="Contents/js/jquery-1.12.4.min.js"></script>
+    <script src="Contents/js/jquery.localLinker.js"></script>
+    <script src="Contents/js/TweenMax.min.js"></script>
+    <script src="Contents/js/TimelineMax.min.js"></script>
+    <script src="Contents/js/swiper.jquery.min.js"></script>
+    <script src="Contents/js/ui.jinsam.js"></script>
+</head>
+<body class="tw">
+    <!--gallery slider-->
+    <div class="pop_slide" id="popGallery">
+        <div class="swiper-container" id="s1">
+            <div class="layer"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+            </div>
+            <div class="swiper-indexer">
+                <!--총 이미지 갯수는 수동으로 마크업(number클래스)-->
+                <span class="active">1</span>/<span class="number">4</span>
+            </div>
+        </div>
+        <div class="wrap_swiper_bottons">
+            <div class="s1_next swiper-button-next swiper-button-white"></div>
+            <div class="s1_prev swiper-button-prev swiper-button-white"></div>
+        </div>
+    </div>
+    <!--//gallery slider-->
+    <!--movie slider-->
+    <div class="wrap_pop_slide">
+        <div class="pop_slide" id="popMovie">
+            <div class="swiper-container" id="s2">
+                <div class="layer"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_1.png" alt="" />
+                        <div class="nation1 description">
+                            <h3>魏</h3>
+                            <p class="ment">「寧可我負天下人, 休教天下人負我!」</p>
+                            <p>
+                                以領導力超凡的曹操為中心，<br />
+                                藉由壓倒性的兵力與無數的菁英猛將<br />
+                                稱霸天下吧！
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_2.png" alt="" />
+                        <div class="nation2 description">
+                            <h3>蜀)</h3>
+                            <p class="ment">
+                                「我們三兄弟雖不能同年同月同日生，<br />
+                                但願同年同月同日死。」
+                            </p>
+                            <p>
+                                擁有獨特親和力與魅力的劉備，
+                                以一擋百的五虎大將軍，
+                                吾將以其為先鋒，匡扶漢室的正統！
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_3.png" alt="" />
+                        <div class="nation3 description">
+                            <h3>吳</h3>
+                            <p class="ment">
+                                「上天既生瑜，何生亮！」
+                            </p>
+                            <p>
+                                猛將林立的江東絕對強者！<br />
+                                洗刷第二悲慘之國的恥辱,<br />
+                                成為三分天下的霸主吧！
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="wrap_swiper_bottons">
+                <div class="s2_next swiper-button-next swiper-button-white"></div>
+                <div class="s2_prev swiper-button-prev swiper-button-white"></div>
+            </div>
+        </div>
+    </div>
+    <!--//movie slider-->
+    <!-- Wrap -->
+    <div id="wrap" class="en">
+        <!-- Header -->
+        <div id="header">
+            <h1><button type="button" class="logo"><img src="Contents/images/pc/logo_global.png" alt="Dynasty Warriors: Unleashed"></button></h1>
+            <div id="nav">
+                <div class="border"></div>
+                <ul class="menu locallinker">
+                    <li class="menu1 active" data-href=".section_main"><button type="button"><span class="blind">main</span></button></li>
+                    <li class="menu2" data-href=".section1"><button type="button">事前登錄</button></li>
+                    <li class="menu3" data-href=".section2"><button type="button">社群</button></li>
+                    <li class="menu4" data-href=".section3"><button type="button">遊戲</button></li>
+                </ul>
+                <ul class="share">
+                    <li>
+                        <button type="button"><span class="blind">open sns list</span></button>
+                        <ul class="sns_list">
+                            <li class="facebook"><button type="button"><span class="blind">facebook</span></button></li>
+                            <li class="tweeter"><button type="button"><span class="blind">tweeter</span></button></li>
+                            <li class="instagram"><button type="button"><span class="blind">instargram</span></button></li>
+                            <li class="snapchat"><button type="button"><span class="blind">snapchat</span></button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //Header -->
+        <!-- Container -->
+        <div id="container">
+            <div class="section_main section">
+                <div class="bg_cloud"></div>
+                <div class="obj_wizard"></div>
+                <div class="inner">
+                    <h2><span class="blind">歷經漫長等待，無雙再掀風雲！ </span></h2>
+                    <div class="hovershow">
+                        <button type="button" class="btn_play" data-video="mMHr7vGATdo" onclick=""><img class="visible" src="Contents/images/pc/btn_mov_obj.png" alt="Play Video"></button>
+                        <p class="txt_playtrailer show-comment">遊戲預告片段</p>
+                    </div>
+                    <ul class="features">
+                        <li><span>您最鍾愛的角色強勢回歸</span></li>
+                        <li><span>對抗兇猛軍隊，參與史詩般戰役</span></li>
+                        <li><span>武器獨具一格，盡展勇猛</span></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn_scroll">View Contents</button>
+                <div class="video_box">
+                    <div class="cover_layer"></div>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rzSO4BX3cJQ?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;hq=720&amp;playlist=rzSO4BX3cJQ;" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="section section1">
+                <div class="inner">
+                    <h2><strong>不要錯過好康優惠</strong></h2>
+                    <p>遊戲內增益道具只要29.99美元！</p>
+                    <div class="image_spot"></div>
+                    <p class="comment">星3呂布 / 1,000 元寶 / 10x 初級體力包子 / 50,000 銀幣</p>
+                    <!--정보입력area-->
+                    <div class="bg_registerbox">
+                        <form action="#" method="post">
+                            <fieldset>
+                                <div class="email">
+                                    <p><label for="userEmail">電子郵件地址</label></p>
+                                    <input id="userEmail" type="email" name="name" placeholder="請輸入電子信箱">
+                                </div>
+                                <ul class="agree">
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk1" value="">
+                                        <label for="agreeChk1">勾選表示同意本<a class="comment" href="https://m-page.nexon.com/term/10" target="_blank">服務條款</a>與 <a class="comment" href="https://m-page.nexon.com/term/10" target="_blank">隱私權政策</a>。</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk2" value="">
+                                        <label for="agreeChk2">[選填]我同意透過電子郵件信箱接收相關資訊及行銷資料。（您可隨時取消訂閱）</label>
+
+                                    </li>
+                                </ul>
+                                <p class="comment">
+                                    ※ 此遊戲必須使用Galaxy S4或iphone5s（iOS 9 或更新版本）以上機型方能執行。
+                                </p>
+                                <ul class="row_2_buttons">
+                                    <li class="row_1"><button type="button" id="btnReg" class="btn_pre_register"><span>立即事前登錄</span></button></li>
+                                    <li class="row_2"><button type="button" class="btn_google"><span class="blind">googleplay</span> <span class="google_txt">事前登錄</span></button><p class="">在Google Play上事前登錄並獲得xx,xxx銀幣</p></li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--정보입력area//-->
+                </div>
+                <img src="Contents/images/pc/obj_char3.png" alt="" class="obj4">
+            </div>
+            <div class="section section2">
+                <div class="obj_girl"></div>
+                <div class="inner">
+                    <h2><strong>先鋒營</strong></h2>
+                    <p>加入先鋒營，可以獲得以下資訊!</p>
+                    <ul class="features">
+                        <li><span>最新消息</span></li>
+                        <li><span>一些特別的真三圖片</span></li>
+                        <li><span>活動內容以及獎勵</span></li>
+                    </ul>
+                    <!--아이프레임삽입 W400px * H300px-->
+                    <div class="ifame_area"> </div>
+                    <!--아이프레임삽입//-->
+                    <button type="button"><span>前往 Facebook</span></button>
+                </div>
+
+            </div>
+            <div class="section section3">
+                <div class="obj_heroes"></div>
+                <div class="inner">
+                    <h2>
+                        <strong>
+                            《真‧三國無雙》一路殺進掌上世界！
+                        </strong>
+                    </h2>
+                    <p>
+                        傳奇人物再次聚集，一統三國<br />
+                        浩大戰爭場面，屠殺兇猛敵軍<br />
+                        武器獨具一格，盡展勇猛
+                    </p>
+                    <ul class="row_2_buttons">
+                        <li class="row_1"><button class="pop_gallery" type="button"><span>畫面</span></button></li>
+                        <li class="row_2"><button class="pop_video" type="button"><span>影片</span></button></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div id="footer">
+                <div class="inner">
+                    <div class="company_logo"></div>
+                    <ul class="copyright">
+                        <li>&copy; KOEI TECMO GAMES CO., LTD. All rights reserved.</li>
+                        <li>&copy; NEXON Korea Corporation Co., Ltd. All Rights Reserved.</li>
+                        <li>&copy; XPEC Entertainment INC. All rights reserved.</li>
+                    </ul>
+                    <div class="rating">
+                        <ul>
+                            <li>本遊戲為免費使用，遊戲內另提供購買虛擬遊戲幣、物品等付費服務。</li>
+                            <li>請注意遊戲時間，避免沉迷。</li>
+                            <li>本遊戲部份情節涉及暴力等攻擊畫面。</li>
+                        </ul>
+                    </div>
+                    <div class="wrap_combobox">
+                        <select class="language">
+                            <option value="">English</option>
+                            <option value="">Korean</option>
+                            <option value="">Chinese</option>
+                            <option value="">Thai</option>
+                            <option value="">French</option>
+                            <option value="">German</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- //Footer -->
+        </div>
+        <!-- //Container -->
+    </div>
+    <!-- //Wrap -->
+    <!--movie popup-->
+    <div class="movPop popup">
+        <div class="layer"></div>
+        <div class="inner">
+            <button type="button" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//movie popup-->
+    <!--popup-->
+    <div class="alertPop popup" id="alertPop">
+        <div class="layer"></div>
+        <div class="inner">
+            <p></p>
+            <button type="button" data-tohide="alertPop" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//popup-->
+</body>
+</html>

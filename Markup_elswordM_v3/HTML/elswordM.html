@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="nx:game_name" content="">
+    <meta property="nx:item_name" content="엘소드엠">
+    <title>엘소드엠</title>
+    <link rel="shortcut icon" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="stylesheet" href="Contents/css/style.css">
+    <script src="Contents/js/jquery-1.12.4.min.js"></script>
+    <script src="Contents/js/TweenMax.min.js"></script>
+    <script src="Contents/js/TimelineMax.min.js"></script>
+    <script src="Contents/js/jquery.parallax.js"></script>
+    <script src="Contents/js/ui.elswordm.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="logo">
+            <h1 class="blind">ELSWORD::Shadow of Luna</h1>
+        </div>
+        <div id="container" class="contents">
+            <div class="section">
+                <div class="inner">
+                    <div class="obj_elf"></div>
+                    <ul id="scene" class="scene">
+                        <li class="layer" data-depth="1.00"><img src="Contents/images/pc/obj_particles_1.png"></li>
+                        <li class="layer" data-depth="0.60"><img src="Contents/images/pc/obj_particles_2.png"></li>
+                        <li class="layer" data-depth="0.20"><img src="Contents/images/pc/obj_particles_3.png"></li>
+                    </ul>
+                    <div class="cont_box keep-middle">
+                        <h2><img src="Contents/images/pc/title.png" alt="쾌감!액션RPG"></h2>
+                        <p class="blind">사전예약 참여하고 엘소드M을 가장 먼저 만나 보세요!</p>
+                        <!--영상보여주기-->
+                        <!--
+                        <button type="button" class="btn_play popup_video_play" data-src="https://www.youtube.com/embed/3tPjpBrPuf8?rel=0&controls=0&showinfo=0&autoplay=1"><img src="Contents/images/pc/btn_play.png" alt="영상 보기"></button>
+                        -->
+                        <!--영상이아직준비중-->
+                        <button type="button" class="btn_play popup_video_play" data-toshow="msg_5"><img src="Contents/images/pc/btn_play.png" alt="영상 보기"></button>
+                        <button type="button" class="btn_reg"><img src="Contents/images/pc/btn_reg.png" alt="사전예약 신청하기"></button>
+                        <div id="footer">
+                            <p>NEXON Korea Corporation & KOG Corporation. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="cover_dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap_main_video  v_content">
+    </div>
+    <div class="regPop popup">
+        <div class="popup_layer"></div>
+        <div class="popup_inner top-middle">
+            <div class="popup_layer_bg"></div>
+            <div class="popup_content">
+                <div class="pd40">
+                    <h3><span class="blind">사전예약 참여하고 엘소드M을 가장 먼저 만나 보세요!</span></h3>
+                    <div class="phone">
+                        <p class="only_android"><span class="blind">안드로이드만 가능합니다.</span></p>
+                        <label for="phoneNum" class="blind">휴대폰번호입력</label>
+                        <input for="phoneNum" type="text" name="name" value="010" class="input_placeHolder inp_bg_on" data-numberonly="true" data-placeholderclass="inp_bg_on" title="휴대폰번호입력란">
+                    </div>
+                    <ul class="agreelist">
+                        <li>
+                            <input type="checkbox" name="agr" id="agreeChk1" value="">
+                            <label class="checkbox_label" for="agreeChk1"><span class="blind">(필수)광고 문자 수신 동의</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="agr" id="agreeChk2" value="">
+                            <label class="checkbox_label txt_2" for="agreeChk2"><span class="blind">개인정보 수집 및 이용 동의</span></label>
+                            <a class="view_detail" data-toshow="forgareeChk2" href="#"><span class="blind">개인정보 수집 및 이용 동의 자세히보기</span></a>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="agr" id="agreeChk3" value="">
+                            <label class="checkbox_label txt_3" for="agreeChk3"><span class="blind">개인정보 처리 위탁 동의</span></label>
+                            <a class="view_detail" data-toshow="forgareeChk3" href="#"><span class="blind">개인정보처리 위탁 동의 자세히보기</span></a>
+                        </li>
+                    </ul>
+                    <div class="detail forgareeChk2">
+                        <strong>
+                            [개인정보 수집 및 이용에 대한 동의 안내]
+                        </strong>
+                        ㈜넥슨코리아는 게임 정보 및 사전예약 이벤트 정보 안내를 위해 다음과 같이
+                        개인정보를 수집하고 있습니다.<br /><br />
+                        - 개인정보의 수집 및 이용목적: 게임 정보 및 이벤트 정보 안내<br />
+                        - 수집하는 개인정보의 항목: 휴대폰번호<br />
+                        - 개인정보의 보유 및 이용기간: 수집일로부터 1년<br /><br />
+                        이용자는 본 동의를 거부할 권리가 있습니다.<br />
+                        단, 동의를 거부하는 경우 게임 정보 및 이벤트 정보 안내 문자를 받을 수 없습니다.<br /><br />
+                    </div>
+                    <div class="detail forgareeChk3">
+                        <strong>
+                            [개인정보 처리 위탁에 대한 동의]
+                        </strong>
+                        ㈜넥슨코리아는 게임 정보 제공을 위해 다음과 같이 개인정보를 위탁합니다.<br /><br />
+                        - 개인정보 위탁 업체: ㈜넥슨네트웍스<br />
+                        - 개인정보 위탁 목적: 게임 정보 안내 및 고객문의 처리<br /><br />
+                        - 개인정보 위탁 업체: ㈜다우기술<br />
+                        - 개인정보 위탁 목적: 게임 정보 및 이벤트 정보 안내를 위한 문자 발송<br /><br />
+                    </div>
+
+                    <button type="button" data-toshow="alertPop" class="btn_reg2"><span class="blind">사전예약 신청하기</span></button>
+                </div>
+                <div>
+                    <div class="notice">
+                        <strong class="blind">주의사항!</strong>
+                        <ul class="blind">
+                            <li>베타 테스트는 안드로이드 기기만 참여가 가능합니다.IOS를 사용하시는 분들은 정식 서비스에서 뵙겠습니다.</li>
+                            <li>베타 테스트 게임 다운로드 링크는 베타 테스트 오픈 시 LMS를 통해 발송됩니다.</li>
+                            <li>세부 진행 일정은 내부 사정에 따라 변경 될 수 있습니다.</li>
+                            <li>등록하신 휴대폰 번호로 넥슨 게임 정보가 안내됩니다.</li>
+                            <li>동의를 철회하고 싶을 경우,홈페이지 고객센터에서 모바일 게임 엘소드M을 선택하여 문의를 등록해주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" data-tohide="regPop" class="btn_close">close</button>
+            </div>
+        </div>
+    </div>
+    <div class="alertPop popup" id="msg_1">
+        <div class="popup_layer"></div>
+        <div class="popup_inner top-middle">
+            <div class="popup_content">
+                <div class="pd70">
+                    <strong class="comment"></strong>
+                    <span class="extra_comment"><span class="date">[넥슨] 2017.02.13</span>에 <b>광고문자 수신동의</b>가 처리되었습니다.</span>
+                    <button type="button" data-tohide="alertPop" class="btn_confirm"><span class="blind">확인</span></button>
+                    <button type="button" data-tohide="alertPop" class="btn_close">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[if gt IE 8]><!-->
+    <script>
+        $('#scene').parallax();
+    </script>
+    <!--<![endif]-->
+    <div class="shadow"></div>
+</body>
+</html>

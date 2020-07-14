@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link href="css/default.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>정보입력:회원가입-세가퍼블리싱코리아</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/form.js"></script>
+</head>
+<body id="jBody">
+	<div class="jWrap">
+		<div class="jHeader">
+			<h1>
+				<img src="img/logo.gif" alt="세가퍼블리싱코리아" /></h1>
+			<h2>
+				<img src="img/h2_join.gif" alt="회원가입" /></h2>
+		</div>
+		<div class="jBody">
+			<div class="join_progress">
+				<ol class="senior">
+					<li class="progress1"><span class="blind">약관동의</span></li>
+					<li class="progress2 on2"><span class="blind">본인인증-현재위치</span></li>
+					<li class="progress3"><span class="blind">정보입력</span></li>
+					<li class="progress4"><span class="blind">가입완료</span></li>
+				</ol>
+			</div>
+			<!-- 여기서부터 content 시작-->
+			<div class="join_content">
+				<div class="uio_h3">
+					<h3>정보입력</h3>
+					<span>아이디와 비밀번호 입력만으로 가입이 가능합니다.</span>
+				</div>
+				<form action="/join_veiw_content_parent_agreement.html" method="post" onsubmit="return validateForm()" >
+					<div class="uio_table_style_1 taL">
+						<table>
+							<caption><span class="blind">회원가입</span></caption>
+							<colgroup>
+								<col style="width: 178px" />
+								<col style="" />
+							</colgroup>
+							<tr>
+								<th>
+									<label for="joinId">아이디</label></th>
+								<td>
+									<input id="joinId" class="inp" type="text" name="id" value="" style="width: 280px" />
+									<span class="txt_s_gray" id="joinId_error">4자~16자 이상 영문,슛자만 사용할 수 있습니다</span>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="password">비밀번호</label></th>
+								<td>
+									<input id="password" class="inp" type="password" name="password" value="" style="width: 280px" />
+									<span class="txt_s_gray" id="password_error">6자~20자 이상 영문,숫자,특수문자 조합으로 만들어 주세요</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="bbN">
+									<label for="passwordConfirm">비밀번호 확인</label></th>
+								<td class="bbN">
+									<input id="passwordConfirm" class="inp" type="password" name="passwordConfirm" value="" style="width: 280px" />
+									<span class="txt_s_gray" id="passwordConfirm_error">비밀번호를 한번 더 입력해 주세요</span>
+								</td>
+							</tr>
+							<tr>
+								<th class="bbN">
+									<label for="email">이메일</label></th>
+								<td class="bbN">
+									<input name="name" class="inp" id="email" style="width: 150px;" type="text" value="">
+									&#64;
+								<input name="name" class="inp" id="emailDomain" style="width: 150px;" type="text" value="">
+									<select class="inp" id="emailDomainView">
+										<option value="">직접입력</option>
+										<option value="naver.com">naver.com</option>
+										<option value="nate.com">nate.com</option>
+										<option value="daum.net">daum.net</option>
+										<option value="hotmail.com">hotmail.com</option>
+										<option value="korea.com">korea.com</option>
+										<option value="gmail.com">gmail.com</option>
+										<option value="chol.com">chol.com</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="uio_center_buttons">
+						<button title="확인" class="btn bt_cf mt27" type="submit" id="submit"><span class="blind">확인</span></button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="jFotter">
+		<div class="copyright">
+			<img src="img/txt_copyright.gif" alt="copyright SEGA Publishing Korea all rights reserved." />
+		</div>
+	</div>
+	<script type="text/javascript">
+		var ID_MIN_LENGTH = 4,
+			ID_MAX_LENGTH = 16,
+			PWD_MIN_LENGTH = 6,
+			PWD_MAX_LENGTH = 20,
+			EMAIL_MAX_LENGTH = 20;
+
+		$(function () {
+			$('#joinId').focusout(function () {
+				var id = $.trim($('#joinId').val());
+				if (id.length == 0) {
+					$('#joinId_error').text("아이디를 입력하세요");
+				}
+			}).keyup(function (e) {
+				var id = $.trim($(this).val()),
+					regx = /^[A-Za-z0-9]*$/,
+					msg = "";
+
+				if (id.length < ID_MIN_LENGTH) {
+					msg = "최소 4자 이상 입력해 주세요";
+				} else if (!regx.test(id)) {
+					msg = "영어, 숫자 조합만 가능합니다";
+				}
+
+				$('#joinId_error').text(msg);
+			}).keypress(function (e) {
+				var id = $.trim($(this).val());
+				if (id.length >= ID_MAX_LENGTH) {
+					return false;
+				}
+			});
+
+			$('#password').focusout(function(){
+				var $pwd = $('#password');
+				if ($.trim($pwd.val()).length == 0) {
+					$('#password_error').text("비밀번호를 입력하세요");
+				}
+				return true;
+			}).keyup(function (e) {
+				var pwd = $.trim($(this).val()),
+					regx = /^(?=.*?[A-Za-z])(?=.*?\d)(?=.*?[!#$%&'()*+-.:;<=>?@[\\\]^_`{|}~\x22\s]).{6,20}$/, //문자, 숫자, 특수기호 조합 필수
+					//regx = /^(?=.*?[A-Za-z])|(?=.*?\d)|(?=.*?[!#$%&'()*+-.:;<=>?@[\\\]^_`{|}~\x22\s]).{6,20}$/, //문자, 숫자, 특수기호 조합 가능
+					msg = "";
+
+				if (pwd.length < PWD_MIN_LENGTH) {
+					msg = "최소 6자 이상 입력해 주세요";
+				} else if (!regx.test(pwd)) {
+					msg = "영문,숫자,특수문자 조합만 가능합니다";
+				}
+
+				$('#password_error').text(msg);
+			}).keypress(function () {
+				var id = $.trim($(this).val());
+				if (id.length >= PWD_MAX_LENGTH) {
+					return false;
+				}
+			});
+
+			$('#passwordConfirm').focusout(function () {
+				var pwd = $.trim($('#password').val()),
+					pwdConfirm = $.trim($(this).val()),
+					msg = "";
+
+				if (pwdConfirm.length == 0) {
+					msg = "비밀번호를 한번 더 입력해 주세요";
+				} else if (pwd != pwdConfirm) {
+					msg = "비밀번호와 일치하지 않습니다"
+				}
+
+				$('#passwordConfirm_error').text(msg);
+			});
+
+			$('#email').keypress(function () {
+				var email = $.trim($(this).val());
+				if (email.length >= PWD_MAX_LENGTH) {
+					return false;
+				}
+			});
+
+			$('#emailDomainView').change(function () {
+				var selectedDomain = $('#emailDomainView option:selected').val(),
+					$emailDomain = $('#emailDomain');
+
+				$emailDomain.val(selectedDomain);
+				if (selectedDomain == "") {
+				    $(this).prev().show();
+				} else {
+				    $(this).prev().hide();
+                    console.log($(this))
+				}
+			});
+		});
+
+		function validateForm() {
+			var $id = $('#joinId'),
+				id_trimmed = $.trim($id.val()),
+				idRegx = /^[A-Za-z0-9]*$/,
+				$pwd = $('#password'),
+				pwd_trimmed = $.trim($pwd.val()),
+				pwdRegx = /^(?=.*?[A-Za-z])(?=.*?\d)(?=.*?[!#$%&'()*+-.:;<=>?@[\\\]^_`{|}~\x22\s]).{6,20}$/, //문자, 숫자, 특수기호 조합 필수
+				//pwdRegx = /^(?=.*?[A-Za-z])|(?=.*?\d)|(?=.*?[!#$%&'()*+-.:;<=>?@[\\\]^_`{|}~\x22\s]).{6,20}$/, //문자, 숫자, 특수기호 조합 가능
+				$pwdConfirm = $('#passwordConfirm'),
+				pwdConfirm_trimmed = $.trim($pwdConfirm.val()),
+				$email = $('#email'),
+				email_trimmed = $.trim($email.val()),
+				$emailDomain = $('#emailDomain'),
+				emailDomain_trimmed = $.trim($emailDomain.val());
+
+
+			if (id_trimmed.length == 0) {
+				alert('아이디를 확인해주세요');
+				$id.focus();
+			} else if (id_trimmed.length < ID_MIN_LENGTH) {
+				alert("아이디는 최소 4자 이상 입력해 주세요");
+				$id.focus();
+			} else if (id_trimmed.length > ID_MAX_LENGTH) {
+				alert("아이디는 최대 16자 이하로 입력해 주세요");
+				$id.focus();
+			} else if (!idRegx.test(id_trimmed)) {
+				alert("아이디는 영어, 숫자 조합만 가능합니다");
+				$id.focus();
+			} else if (pwd_trimmed.length == 0) {
+				alert('비밀번호를 확인해주세요');
+				$pwd.focus();
+			} else if (pwd_trimmed.length < PWD_MIN_LENGTH) {
+				alert("비밀번호는 최소 6자 이상 입력해 주세요");
+				$pwd.focus();
+			} else if (pwd_trimmed.length > PWD_MAX_LENGTH) {
+				alert("비밀번호는 최대 20자 이하로 입력해 주세요");
+				$pwd.focus();
+			} else if (!pwdRegx.test(pwd_trimmed)) {
+				alert('비밀번호는 영문,숫자,특수문자 조합만 가능합니다');
+				$pwd.focus();
+			} else if (pwdConfirm_trimmed.length == 0) {
+				alert('비밀번호를 한번 더 입력해 주세요');
+				$pwdConfirm.focus();
+			} else if (pwd_trimmed != pwdConfirm_trimmed) {
+				alert('비밀번호가 일치하지 않습니다');
+				$pwdConfirm.focus();
+			} else if (email_trimmed.length == 0) {
+				alert('이메일을 확인해주세요');
+				$email.focus();
+			} else if (emailDomain_trimmed.length == 0) {
+				alert('이메일을 확인해주세요');
+				$emailDomain.focus();
+			} else {
+				return true;
+			}
+			return false;
+		}
+
+	</script>
+</body>
+</html>

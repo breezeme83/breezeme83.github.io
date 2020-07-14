@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>LEGO :: 퀘스트앤콜렉트 CBT</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.localLinker.js"></script>
+</head>
+<!--14세 이하인 경우 : user_age_under14  // 14세 이상인 경우 : user_age_over14 default : user_age_under14-->
+<body class="container user_age_under14">
+    <!--S : popup 영역-->
+    <div class="section-popup">
+        <!--s :비디오 영상-->
+        <div class="wrap_main_video  v_content">
+        </div>
+        <!--e : 비디오 영상-->
+        <!--s : 만14세유무확인-->
+        <div class="popup pop_query_age" style="display:none;">
+            <div class="ch_engineer"><img src="images/pop_ch_engineer.png" alt="" /></div>
+            <div class="question">
+                <b class="blind">주의!본인은 만14세 이상입니까</b>
+                <img class="under640" src="images/pop_query_over14_small.gif" alt="주의!본인은 만14세 이상입니까" />
+                <img class="over640" src="images/pop_query_over14.gif" alt="주의!본인은 만14세 이상입니까" />
+            </div>
+            <div class="answer">
+                <button type="button" data-toshow="pop_under14_move" class="btn_yes showPopup">
+                    <img src="images/pop_btn_yes.gif" alt="네">
+                </button>
+                <button type="button" data-toshow="pop_under14" class="btn_no showPopup">
+                    <img src="images/pop_btn_no.gif" alt="아니오">
+                </button>
+            </div>
+        </div>
+        <!--e : 만14세유무확인-->
+        <!--s : 만14세미만-->
+        <div class="popup pop_under14" style="display:none;">
+            <div class="question alertunder14">
+                <b class="blind">죄송합니다.만14세이하는LMS를 통한 사전예약이 불가능합니다.CBT시작후 구글플레이 스토어에서 퀘스트앤콜렉트를 검색하여 다운로드 받아주세요.CBT시작 일정을 홈페이지를 통해 확인하실 수 있습니다.</b>
+                <img class="under640" src="images/pop_under14_small.gif" alt="죄송합니다.만14세이하는LMS를 통한 사전예약이 불가능합니다." />
+                <img class="over640" src="images/pop_under14.gif" alt="죄송합니다.만14세이하는LMS를 통한 사전예약이 불가능합니다." />
+            </div>
+            <div class="answer">
+                <button type="button" class="btn_ok">
+                    <img src="images/pop_btn_ok.gif" alt="확인">
+                </button>
+            </div>
+        </div>
+        <!--e : 만14세미만-->
+        <!--s : 구글플레이스토어이동-->
+        <div class="popup pop_under14_move" style="display:none;">
+            <div class="question going">
+                <b class="blind">레고퀘스트앤콜렉트 사전예약 페이지에서 구글 플레이 스토어로 이동합니다.다음 페이지는 성인을 위한 컨텐츠가 포함되어 있을 수 있습니다.</b>
+                <img class="under640" src="images/pop_under14_move_small.gif" alt="레고퀘스트앤콜렉트 사전예약 페이지에서 구글 플레이 스토어로 이동합니다.다음 페이지는 성인을 위한 컨텐츠가 포함되어 있을 수 있습니다." />
+                <img class="over640" src="images/pop_under14_move.gif" alt="레고퀘스트앤콜렉트 사전예약 페이지에서 구글 플레이 스토어로 이동합니다.다음 페이지는 성인을 위한 컨텐츠가 포함되어 있을 수 있습니다." />
+
+            </div>
+            <div class="answer">
+                <button type="button" class="btn_going">
+                    <img src="images/pop_btn_going.gif" alt="계속하기">
+                </button>
+                <button type="button" class="btn_close">
+                    <img src="images/pop_btn_close.gif" alt="닫기">
+                </button>
+            </div>
+        </div>
+        <!--e : 구글플레이스토어이동-->
+        <!--s : 등록완료-->
+        <div class="popup pop_complete" style="display:none;">
+            <div class="myphonenumber">010 - 8210 - 4579</div>
+            <div class="question complete">
+                <b class="blind">
+                    레고 퀘스트앤콜렉트 CBT사전등록이 완료 되엇습니다!CBT를 기대해 주세요!넥슨 광고문자 수신동의가 완료되었습니다.휴대폰 동의 수신 동의
+                    철회를 원하실 경우, 넥슨 홈페이지 고객센터 모바일게임 ->레고 퀘스트앤콜렉트 를 선택하시고 문의를 보내주세요.
+                </b>
+                <img class="under640" src="images/pop_complete_small.gif" alt="레고 퀘스트앤콜렉트 CBT사전등록이 완료 되엇습니다!" />
+                <img class="over640" src="images/pop_complete.gif" alt="레고 퀘스트앤콜렉트 CBT사전등록이 완료 되엇습니다!" />
+            </div>
+            <div class="answer">
+                <button type="button" class="btn_close">
+                    <img src="images/pop_btn_ok.gif" alt="확인">
+                </button>
+            </div>
+        </div>
+        <!--e : 등록완료-->
+        <!--s : 다른페이지로이동경고-->
+        <div class="popup pop_move_notice" style="display:none;">
+            <div class="question caution">
+                <b class="blind">
+                    주의!레고퀘스트앤콜렉트 사전 예약 페이지에서 다른 페이지로 이동합니다.
+                    다음 페이지는 성인을 위한 컨텐츠가 포함되어 있을 수 있습니다.
+                    14세 이하 어린이는 성인의 보호가 필요하므로 주의 부탁드립니다.
+                </b>
+                <img class="under640" src="images/pop_caution_small.gif" alt=" 주의!레고퀘스트앤콜렉트 사전 예약 페이지에서 다른 페이지로 이동합니다." />
+                <img class="over640" src="images/pop_caution.gif" alt=" 주의!레고퀘스트앤콜렉트 사전 예약 페이지에서 다른 페이지로 이동합니다." />
+
+            </div>
+            <div class="answer">
+                <button type="button" class="btn_going">
+                    <img src="images/pop_btn_going.gif" alt="계속하기">
+                </button>
+                <button type="button" class="btn_close">
+                    <img src="images/pop_btn_close.gif" alt="닫기">
+                </button>
+            </div>
+        </div>
+        <!--e : 다른페이지로이동경고-->
+        <!--s : 수집동의-->
+        <div class="popup agree_collect" style="display:none;">
+            <a href="#" class="popup_close">
+                <img src="images/pop_close.gif" alt="닫기" />
+            </a>
+            <div class="question ">
+                <img class=" " src="images/pop_agree_collect.gif" alt="개인 정보 수집 및 이용 동의 안내" />
+                <h3><span class="blind">개인정보 수집 및 이용 동의 안내</span></h3>
+                <strong class="blind">(주)넥슨코리아는 퀘스트앤콜렉트 게임 정보 및 이벤트 정보 안내를 위해 다음과 같이 개인정보를 수집하고 있습니다.</strong>
+                <ul class="blind">
+                    <li>개인정보의 수집 및 이용목적:게임 정보 및 이벤트 정보 안내</li>
+                    <li>수집하는 개인정보의 항목:휴대폰번호</li>
+                    <li>개인정보의 보유 및 이용기간:수집일로부터1년</li>
+                </ul>
+                <strong class="blind">이용자는 본 동의를 거부할 권리가 있습니다.단 동의를 거부하는 경우 게임 정보 및 이벤트 정보 안내 문자를 받을 수 없습니다.</strong>
+
+            </div>
+            <div class="answer">
+                <button type="button" class="btn_ok">
+                    <img src="images/pop_btn_ok.gif" alt="확인">
+                </button>
+            </div>
+        </div>
+        <!--e : 수집동의-->
+        <!--s : 처리위탁동의-->
+        <div class="popup agree_agencies" style="display:none;">
+            <a href="#" class="popup_close">
+                <img src="images/pop_close.gif" alt="닫기" />
+            </a>
+            <div class="question">
+                <h3><span class="blind">개인정보 처리위탁 동의 안내</span></h3>
+                <strong class="blind">(주)넥슨코리아는 게임 정보 제공을 위해 다음과 같이 개인 정보를 위탁합니다.</strong>
+                <ul class="blind">
+                    <li>개인정보 위탁업체:(주)넥슨 네트웍스,(주)와이즈폴</li>
+                    <li>개인정보 위탁 목적:게임 정보 안내 및 고객 문의 처리</li>
+                    <li>개인정보 위탁 업체:(주)다우기술</li>
+                    <li>개인정보 위탁 목적:게이 정보 및 이벤트 정보 안내를 위한 문자 발송</li>
+                </ul>
+                <img class=" " src="images/pop_agree_agencies.gif" alt="개인정보 처리위탁 동의 안내" />
+            </div>
+            <div class="answer">
+                <button type="button" class="btn_ok">
+                    <img src="images/pop_btn_ok.gif" alt="확인">
+                </button>
+            </div>
+        </div>
+        <!--e : 처리위탁동의-->
+    </div>
+    <!--E : popup 영역-->
+    <div class="wrap_bg_movie">
+        <div id="bgMovie">
+        </div>
+        <div class="cover"></div>
+    </div>
+    <header id="global_topbar">
+        <h1><a href="#"><img src="images/global_logo.gif" alt="NEXON"></a></h1>
+        <ul class="linkbox over14">
+            <li><a class="facebooklink user_age_over14" href="#" title="페이스북"></a></li>
+        </ul>
+    </header>
+    <div class="gnb">
+        <ul class="under640">
+            <li><a class="gnb_button" href="#sectionReg"><img src="images/gnb1_small_off.png" alt="CBT신청" /></a></li>
+            <li><a class="gnb_button" href="#sectionEvent1"><img src="images/gnb2_small_off.png" alt="사전 예약 이벤트" /></a></li>
+            <li><a class="gnb_button" href="#sectionEvent2"><img src="images/gnb3_small_off.png" alt="인게임 이벤트" /></a></li>
+            <li><a class="gnb_button" href="#sectionSystem"><img src="images/gnb4_small_off.png" alt="게임 특징" /></a></li>
+        </ul>
+        <ul class="over640">
+            <li class="lnk_forum"><a href="#"><img src="images/lnk_forum.gif" alt="" /></a></li>
+            <li><a class="popup_video_play" href="#" data-src="https://www.youtube.com/embed/3tPjpBrPuf8?rel=0&controls=0&showinfo=0"><img src="images/gnb1.png" alt="공식영상" /></a></li>
+            <li><a class="gnb_button" href="#sectionReg"><img src="images/gnb2_off.png" alt="CBT신청" /></a></li>
+            <li><a class="gnb_button" data-margin="250" href="#sectionEvent1"><img src="images/gnb3_off.png" alt="사전 예약 이벤트" /></a></li>
+            <li><a class="gnb_button" data-margin="200" href="#sectionEvent2"><img src="images/gnb4_off.png" alt="인게임 이벤트" /></a></li>
+            <li><a class="gnb_button" data-margin="250" href="#sectionSystem"><img src="images/gnb5_off.png" alt="게임 특징" /></a></li>
+            <li class="lnk_facebook"><a class="" href="#"><img src="images/lnk_facebook.png" alt="페이스 북" /></a></li>
+        </ul>
+    </div>
+    <div class="index-container">
+        <section class="section section-main">
+            <div class="wrap-contents">
+                <h2 class="blind">레고 퀘스트앤콜렉트 당신이 만들어나갈 레고 영웅들과의 근사한 모험</h2>
+                <div class="wrap-logo">
+                    <img src="images/txt_main_title.png" alt="레고 퀘스트앤콜렉트 당신이 만들어나갈 레고 영웅들과의 근사한 모험" />
+                </div>
+                <a class="over640 wrap-jump" href="#sectionReg">
+                    <img src="images/jump.png" alt="다음으로이동" />
+                </a>
+                <a class="under640 btn_play" data-src="https://www.youtube.com/embed/3tPjpBrPuf8?rel=0&controls=0&showinfo=0" herf="#">
+                    <img src="images/btn_play.png" alt="공식영상보기" />
+                </a>
+                <!--<div class="ch_helicopter">
+                    <img src="images/ch_helicopter.png" alt="">
+                </div>-->
+            </div>
+        </section>
+        <section id="sectionReg" class="section section-reg">
+            <h2 class="blind">레고 퀘스트앤콜렉트 CBT사전예약</h2>
+            <dl class="blind">
+                <dt>모집기간</dt>
+                <dd>2016.11.07~11.20</dd>
+            </dl>
+            <div class="wrap-contents">
+                <div class="wrap_reg">
+                    <div class="re_box_reg">
+                        <img src="images/box_reg.png" alt="" />
+                    </div>
+                    <div class="re_box_reg_small">
+                        <img src="images/box_reg_small.png" alt="" />
+                    </div>
+
+                    <!--s : CBT사전예약-->
+                    <div class="section-preplay over14">
+                        <h2 class="pre_reg">
+                            <img src="images/txt_pre_reg.png" alt="레고퀘스트앤콜렉트CBT사전예약">
+                        </h2>
+                        <b class="txt_onlyandroid">
+                            <img src="images/txt_onlyandroid.png" alt="안드로이드만참여가능">
+                        </b>
+                        <b class="txt_notice">
+                            <img src="images/txt_notice.png" alt="CBT참여는 안드로이드 디바이스로만 가능합니다.">
+                        </b>
+                        <form action="#" method="post">
+                            <fieldset>
+                                <div class="user_input">
+                                    <table class="phone">
+                                        <tbody>
+                                            <tr>
+                                                <td class="td1">
+                                                    <!--앞자리선택-->
+                                                    <label for="phoneNum1" class="blind">휴대폰 통신사 선택</label>
+                                                    <select id="phoneNum1" class="wrap_select">
+                                                        <option value="value">010</option>
+                                                        <option value="value">016</option>
+                                                        <option value="value">017</option>
+                                                        <option value="value">018</option>
+                                                        <option value="value">019</option>
+                                                    </select>
+                                                </td>
+                                                <td class="td2">
+                                                    <!--휴대폰번호입력-->
+                                                    <div class="wrap_phone">
+                                                        <label for="phoneNum2" class="blind">휴대폰번호입력</label>
+                                                        <input for="phoneNum2" type="number" name="name" value="" class="input_placeHolder inp_bg_on" data-numberonly="true" data-placeholderclass="inp_bg_on"
+                                                               title="휴대폰번호입력란">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="agreelist">
+                                        <tbody>
+                                            <tr>
+                                                <td class="agreelist1">
+                                                    <div class="wrap_agr1">
+                                                        <!--1.개인정보수집이용동의-->
+                                                        <input type="checkbox" name="agr" id="agreeChk1" value="">
+                                                        <label class="checkbox_label" for="agreeChk1">
+                                                            <table class="tb1">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="td1"><span></span></td>
+                                                                        <td class="td2">
+                                                                            <img src="images/label_agree1.gif" alt="개인정보수집및이용동의">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </label>
+
+                                                    </div>
+
+                                                </td>
+                                                <td class="detil1">
+                                                    <!--개인정보수집전문보기-->
+                                                    <a class="txt_detail showPopup" data-toshow="agree_collect" href="#">
+                                                        <img src="images/btn_detail.gif" alt="개인정보수집및이용동의전문보기">
+                                                    </a>
+                                                </td>
+                                                <td class="b_l agreelist2">
+                                                    <div class="wrap_agr3">
+                                                        <!--3.광고성SNS수신동의-->
+                                                        <input type="checkbox" name="agr" id="agreeChk3" value="">
+                                                        <label class="checkbox_label" for="agreeChk3">
+                                                            <table class="tb1">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="td1"><span></span></td>
+                                                                        <td class="td2"><img src="images/label_agree3.gif" alt="광고문자수신동의"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="b_l agreelist3 appendTo">
+                                                    <div class="wrap_agr2">
+                                                        <input type="checkbox" name="agr" id="agreeChk2" value="">
+                                                        <label class="checkbox_label" for="agreeChk2">
+                                                            <table class="tb1">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="td1"><span></span></td>
+                                                                        <td class="td2"><img src="images/label_agree2.gif" alt="개인정보처리위탁동의"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </label>
+                                                    </div>
+
+                                                </td>
+                                                <td class="detil2 appendTo">
+                                                    <a class="txt_detail2 showPopup" data-toshow="agree_agencies" href="#">
+                                                        <img src="images/btn_detail.gif" alt="개인정보처리위탁전문보기">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--s : 640미만-->
+                                    <table class="agreelist_small">
+                                        <tr class="insert_elm"></tr>
+                                        <!--e : 640미만-->
+                                    </table>
+                                    <table class="ageagree">
+                                        <tr>
+                                            <td class="agreelist1">
+                                                <div class="wrap_agr1">
+                                                    <!--4.14세기준나이체크-->
+                                                    <input type="checkbox" name="agr" data-toshow="pop_query_age" id="agreeChk4" value="">
+                                                    <label class="checkbox_label" for="agreeChk4">
+                                                        <table class="tb1">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="td1"><span class="check2"></span></td>
+                                                                    <td class="td2">
+                                                                        <img src="images/label_agree4.gif" alt="본인은 만14세 이상입니다.">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </label>
+
+                                                </div>
+
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                    <!--신청하기-->
+                                    <button type="button" data-toshow="pop_query_age" class="btn_reg showPopup">
+                                        <img src="images/btn_reg.png" alt="신청하기">
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--e : CBT사전예약-->
+                    <!--s : CBT진행중-->
+                    <div class="section-CBT" style="display:none;">
+                        <h2 class="pre_reg">
+                            <img src="images/txt_cbt.png" alt="레고z퀘스트앤콜렉트CBT진행중">
+                        </h2>
+                        <b class="blind">지금 구글 플레이 스토어에서 참여하세요.</b>
+                        <b class="txt_welcome">
+                            <img src="images/txt_welcome.png" alt="지금바로 브릭 월드에 들어오세요!">
+                        </b>
+                        <!--고객센터 가기-->
+                        <a href="#" class="btn_customercenter">
+                            <img src="images/btn_customercenter.gif" alt="고객 센터 바로 가기">
+                        </a>
+                        <!--구글플레이로 가기-->
+                        <a href="#" class="btn_googleplay">
+                            <img src="images/btn_googleplay.png" alt="구글 플레이 스토어 이동">
+                        </a>
+                        <b class="txt_notice">
+                            <img src="images/txt_notice.png" alt="CBT 참여는 안드로이드 디바이스로만 가능합니다.">
+                        </b>
+                    </div>
+                    <!--s : CBT진행중-->
+                    <!--s : 14세미만 -->
+                    <div class="under14">
+                        <h2 class="pre_reg">
+                            <img src="images/txt_pre_reg_user_age_nuder14.png" alt="레고퀘스트앤콜렉트CBT진행중">
+                        </h2>
+                        <b class="blind">지금 구글 플레이 스토어에서 참여하세요.</b>
+                        <b class="txt_welcome">
+                            <img src="images/txt_encourage.png" alt="지금바로 브릭 월드에 들어오세요!">
+                        </b>
+                        <!--고객센터 가기-->
+                        <a href="#" class="btn_customercenter">
+                            <img src="images/btn_customercenter.gif" alt="고객 센터 바로 가기">
+                        </a>
+
+                        <b class="txt_notice">
+                            <img src="images/txt_notice_user_age_under14.png" alt="CBT 참여는 안드로이드 디바이스로만 가능합니다.">
+                        </b>
+                    </div>
+                    <!--e : 14세미만 -->
+                    <div class="ch_angel">
+                        <img src="images/ch_angel.png" alt="">
+                    </div>
+                    <div class="ch_madc">
+                        <img src="images/ch_madc.png" alt="">
+                    </div>
+
+
+                    <div class="ch_madc_small">
+                        <img src="images/ch_madc_small.png" alt="">
+                    </div>
+                    <div class="ch_angel_small">
+                        <img src="images/ch_angel_small.png" alt="">
+                    </div>
+
+
+                    <div class="ch_block_left">
+                        <img src="images/ch_block_left.png" alt="">
+                    </div>
+                    <div class="ch_block_right">
+                        <img src="images/ch_block_right.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--s : 첫화면진입시만14세유무확인-->
+            <div id="blockReg" class="popup pop_input_age" style="display:block;">
+                <div class="ch_engineer"><img src="images/pop_ch_engineer.png" alt="" /></div>
+                <div class="question">
+                    <b class="blind">알림!당신의 나이를 입력하세요</b>
+                    <img class="under640" src="images/pop_input_age_small.gif" alt="알림!당신의 나이를 입력하세요" />
+                    <img class="over640" src="images/pop_input_age.gif" alt="알림!당신의 나이를 입력하세요" />
+                    <p class="input_age">
+                        <label for="inputAge" class="blind">나이입력</label>
+                        <input id="inputAge" type="number" name="name" value="" />
+                    </p>
+                    <img class="under640" src="images/pop_input_age_comment_small.gif" alt="인증 수단 이후 성인을 위한 컨텐츠가 포함되어 있을 수 있으므로
+만 14세 이하 미성년자 어린이는 성인의 보호가 필요합니다." />
+                    <img class="over640" src="images/pop_input_age_comment.gif" alt="주인증 수단 이후 성인을 위한 컨텐츠가 포함되어 있을 수 있으므로
+만 14세 이하 미성년자 어린이는 성인의 보호가 필요합니다." />
+                </div>
+                <div class="answer">
+                    <button type="button" data-toshow="pop_under14_move" class="btn_ok2 realignmentContent">
+                        <img src="images/pop_btn_ok2.gif" alt="확인">
+                    </button>
+
+                </div>
+            </div>
+            <!--e : 첫화면진입시만14세유무확인-->
+            <div class="bg_pop_input_age"></div>
+        </section>
+        <section id="sectionEvent1" class="section section-event1">
+            <div class="wrap-contents">
+                <h2 class="blind">사전예약 이벤트</h2>
+                <b class="blind">지금 사전 등록하면 CBT기간 동안 선물 지급</b>
+                <div class="wrap_event1">
+                    <div class="event1">
+                        <dl class="blind">
+                            <dt>CBT가입 즉시 지급</dt>
+                            <dd>레고 퀘스트앤콜렉트 플레이만 해도 크리스탈 600개가 쏟아진다!</dd>
+                            <dt>CBT 기간 동안 매일 상품이 쏟아진다.</dt>
+                            <dd>레고 퀘스트앤콜렉트 출석 보상:1일차:바나나,2일차:B등금 강화 브릭,3일차:제작 브릭,4일차:크리스탈,5일차:위자드</dd>
+                        </dl>
+                        <div class="re_event1">
+                            <img src="images/event1.png" alt="사전예약이벤트">
+                        </div>
+                        <div class="re_event1_small">
+                            <img src="images/event1_small.png" alt="사전예약이벤트">
+                        </div>
+                    </div>
+                    <div class="ch_block">
+                        <img src="images/ch_block.png" alt="">
+                    </div>
+                    <div class="ch_wizard">
+                        <img src="images/ch_wizard.png" alt="">
+                    </div>
+                    <div class="ch_wizard_small">
+                        <img src="images/ch_wizard_small.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="spliter_bottom">
+                <img src="images/spliter_1_top.png" alt="">
+            </div>
+        </section>
+        <section id="sectionEvent2" class="section section-event2">
+            <div class="spliter_top">
+                <img src="images/spliter_1_bottom.png" alt="">
+            </div>
+            <div class="wrap-contents">
+
+                <div class="wrap_event2">
+                    <div class="event2">
+                        <h2 class="blind">디오라마건축가이벤트</h2>
+                        <b class="blind">이벤트 기간 : CBT종료 시까지</b>
+                        <dl class="blind">
+                            <dt>디오라마 완성하고 레고 선물 받자!</dt>
+                            <dd>
+                                해적의 비밀 보물섬,닌자고 에어짓주 사원,도시건설현장 3개의 디오라마 중 1개 디오라마를 4레벨 이상
+                                달성한 유저 중 20명을 추럼하여 "CGV영화관람권 1만원권 2매"를 드립니다.
+                            </dd>
+                            <dt>
+                                디오라마 경로
+                            </dt>
+                            <dd>
+                                컬렉션->디오라마->제작->왼쪽 상단 주황색 브릭 레벨 확인
+                            </dd>
+                        </dl>
+                        <b class="blind">자세한 내용은 공식포럼을 확인하세요!</b>
+                        <h2 class="blind">보스전 공략 이벤트</h2>
+                        <b class="blind">이벤트 기간 : CBT종료 시까지</b>
+                        <dl class="blind">
+                            <dt>보스전을 클리어한 유저에게</dt>
+                            <dd>
+                                에피소드 3-15 보스를 별3개로 클리어한 유저 중 20명을 추첨하여"CGV영화관람권 1만원권 2매"를 드립니다.
+                            </dd>
+                        </dl>
+                        <b class="blind">자세한 내용은 공식포럼을 확인하세요!</b>
+                        <div class="re_event2">
+                            <div class="obj_event2_1">
+                                <img src="images/event2_1.png" alt="디오라마건축가이벤트">
+                            </div>
+                            <div class="obj_event2_2">
+                                <img src="images/event2_2.png" alt="보스전공략이벤트">
+                            </div>
+                        </div>
+                        <div class="re_event2_small">
+                            <img src="images/event2_small.png" alt="디오라마건축가이벤트+보스전공략이벤트">
+                        </div>
+                    </div>
+                    <div class="ch_dragon">
+                        <img src="images/ch_dragon.png" alt="">
+                    </div>
+                </div>
+                <div class="spliter_bottom repositioning">
+                    <img src="images/spliter_2_top.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="sectionSystem" class="section section-system">
+            <div class="spliter_top">
+                <img src="images/spliter_2_bottom.png" alt="">
+            </div>
+            <div class="wrap-contents">
+                <h2 class="blind">게임시스템소개</h2>
+                <ol class="blind">
+                    <li>
+                        LEGO SYSTEM01 : 최고 수준의 그래픽 :언리얼 엔지 4를 적용한 최초의 레고 게임! 최고의 그래픽으로표현한
+                        브릭월드와 레고 세계 영웅들을 확인하세요
+                    </li>
+                    <li>
+                        LEGO SYSTEM02 : 나만의 컬렉션 제작 : 여러분이 직접 만들어 나가는 레고세상!
+                        재료를 모아 나만의 멋진 컬렉션을 완성해 보세요!
+                    </li>
+                    <li>
+                        LEGO SYSTEM03 : 다양한 레고 시리즈 : 레고만의 풍부한 시리즈와 유명한 영웅들을 수집하세요!
+                        앞으로 더욱 더 강력한 영웅들이 추가될 예정입니다!
+                    </li>
+                </ol>
+                <div class="wrap_system">
+                    <div class="system">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="border" src="images/slide1.jpg" alt="" />
+                                    <div class="swiper-label">
+                                        <img src="images/slide_label_bg.png" alt="">
+                                        <img class="label_text startPosition" src="images/slide_label_1.png" alt="LEGO SYSTEM01 : 최고 수준의 그래픽">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="border" src="images/slide2.jpg" alt="" />
+                                    <div class="swiper-label">
+                                        <img src="images/slide_label_bg.png" alt="">
+                                        <img class="label_text startPosition" src="images/slide_label_2.png" alt="LEGO SYSTEM02 : 나만의 컬렉션 제작">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="border" src="images/slide3.jpg" alt="" />
+                                    <div class="swiper-label">
+                                        <img src="images/slide_label_bg.png" alt="">
+                                        <img class="label_text startPosition" src="images/slide_label_3.png" alt="LEGO SYSTEM03 : 다양한 레고 시리즈 ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-label-small">
+                            <div>
+                                <img src="images/slide_label_bg_small.png" alt="">
+                                <img class="small-slide-label" src="images/slide_label_1_small.png" alt="LEGO SYSTEM01 : 최고 수준의 그래픽">
+                                <img class="small-slide-label" src="images/slide_label_2_small.png" alt="LEGO SYSTEM02 : 나만의 컬렉션 제작">
+                                <img class="small-slide-label" src="images/slide_label_3_small.png" alt="LEGO SYSTEM03 : 다양한 레고 시리즈">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-button-white"><img src="images/ctr_next.png" alt="다음" /></div>
+                <div class="swiper-button-prev swiper-button-white"><img src="images/ctr_pre.png" alt="이전" /></div>
+                <div class="ch_pirates">
+                    <img src="images/ch_pirates.png" alt="">
+                </div>
+                <div class="ch_pirates_small">
+                    <img src="images/ch_pirates_small.png" alt="">
+                </div>
+                <div class="ch_left_rect">
+                    <img src="images/ch_left_rect.png" alt="">
+                </div>
+                <div class="ch_right_rect">
+                    <img src="images/ch_right_rect.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="sectionNotice" class="section section-notice">
+            <h3 class="blind">CBT 신청 시 유의 사항</h3>
+            <ul class="blind">
+                <li>안드로이드 기기로만 참여가 가능합니다.</li>
+                <li>시작되면 신청하신 휴대 전화 번호로 문자(LMS)를 통해 안내 드립니다.</li>
+                <li>신 휴대 전화 번호로 레고® 퀘스트앤콜렉트 게임 정보가 안내 됩니다.</li>
+                <li>전화 번호를 잘못 입력하거나, 스팸 기능 설정으로 인해 발생하는 불이익에 대해서는 별도 도움을 드리기 어렵습니다.</li>
+            </ul>
+            <h3 class="blind">이벤트 유의 사항</h3>
+            <ul class="blind">
+                <li>이벤트 참여를 위해서는 CBT 신청을 필수로 진행해주셔야 하며, 계정 당 1회만 이벤트에 참여하실 수 있습니다.</li>
+                <li>이벤트 당첨자 발표 및 경품 지급에 대한 안내는 공식 포럼을 통해 별도 안내 드리겠습니다.</li>
+                <li>정상적이지 않은 방법으로 이벤트에 참여하신 경우 당첨 및 상품 지급이 취소될 수 있습니다.</li>
+                <li>이벤트 경품 및 진행 일정은 내부 사정에 따라 변경될 수 있습니다.</li>
+            </ul>
+            <div class="wrap-contents">
+                <!--<div class="wrap_txt_notice over14">
+                    <img src="images/txt_notice.gif" alt="notice">
+                </div>-->
+                <div class="wrap_txt_notice">
+                    <img src="images/txt_notice_user_age_under14.gif" alt="notice">
+                </div>
+                <!--<div class="wrap_txt_notice_small over14">
+                    <img src="images/txt_notice_small.gif" alt="notice">
+                </div>-->
+                <div class="wrap_txt_notice_small">
+                    <img src="images/txt_notice_user_age_under14_small.gif" alt="notice">
+                </div>
+            </div>
+        </section>
+        <section id="sectionFooter" class="section section-footer">
+            <div class="wrap-contents">
+                <p class="blind">
+                    LEGO ® QUEST AND COLLECT: LEGEND OF THE MASTER BRICK software © 2016 Nexon Korea Corporation.
+                    LEGO, the LEGO logo, the brick and the knob configurations and the Minifigure are trademarks of the LEGO Group. © 2016 The LEGO Group. All Rights Reserved.
+                    WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entertainment Inc. (s16)
+                    ⓒ NEXON Korea Corp., Ltd. All Rights Reserved.
+                </p>
+                <div class="wrap_txt_footer">
+                    <img src="images/footer.gif" alt="copyright">
+                </div>
+                <div class="wrap_txt_footer_small">
+                    <img src="images/footer_small.gif" alt="copyright">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="dimmed"></div>
+    <div class="shadow"></div>
+    <script src="js/lego.js"></script>
+</body>
+</html>

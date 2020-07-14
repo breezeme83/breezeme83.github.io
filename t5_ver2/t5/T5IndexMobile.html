@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>TANGO5 </title>
+    <link rel="apple-touch-icon-precomposed" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="shortcut icon" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="stylesheet" href="Contents/css/style_m.css">
+    <link rel="stylesheet" type="text/css" href="Contents/css/slick.css" />
+    <script type="text/javascript" src="Contents/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="Contents/js/slick.js"></script>
+    <script type="text/javascript" src="Contents/js/jquery.localLinker.js"></script>
+    <script type="text/javascript" src="Contents/js/tango5.ui.m.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- mobile common NEXON header html -->
+        <div id="nexonHeader">
+            <a href="http://mobile.nexon.com" target="_blank" class="nexon_logo"><img src="Contents/images/mobile/header_nexon.png" alt="NEXON"></a>
+            <div class="guide">
+                <a href="#" data-href=".section_8"><span class="blind">넥슨연동가이드</span></a>
+            </div>
+        </div>
+        <!-- End mobile common NEXON header html -->
+        <div id="nav">
+            <div class="wrap_bottom">
+                <ul class="menu">
+                    <li class="nav menu2"><a href="#" data-href=".section_3">사전예약</a></li>
+                    <li class="nav menu3"><a href="#" data-href=".section_4">게임 특징</a></li>
+                    <li class="nav menu4"><a href="#" data-href=".section_5">캐릭터</a></li>
+                    <!--이벤트레이어팝업-->
+                    <li class="menu5"><a href="#">이벤트</a></li>
+                    <!--<li class="nav menu5"><a href="#" data-href=".section_6">이벤트</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <div id="container">
+            <div class="wrap_main_video  v_content"></div>
+            <!--section_1:상단일러스트-->
+            <div class="section section_1">
+                <div class="inner">
+                    <p class="spot"></p>
+                </div>
+            </div>
+            <!--section_2:백그라운드영상,유투브동영상보기-->
+            <div class="section section_2">
+                <div class="inner">
+                    <h2><span class="blind">프로들의실시간팀배틀</span></h2>
+                    <div class="wrap_video_thumbs">
+                        <dl class="video_thumb thumb_1">
+                            <dt><button type="button" class="btn_play" data-src="https://www.youtube.com/embed/kb26KOQPRtM?rel=0&controls=0&showinfo=0&autoplay=1"><span class="blind">애니메이션영상보기"</span></button></dt>
+                            <dd><span class="blind">애니메이션</span></dd>
+                        </dl>
+                        <dl class="video_thumb thumb_2">
+                            <dt>
+                                <!--영상준비중입니다.-->
+                                <button type="button" class="btn_play" data-toshow="msg_2"><span class="blind">게임플레이영상보기"</span></button>
+                                <!--영상보기-->
+                                <!--<button type="button" class="btn_play" data-src="https://www.youtube.com/embed/kb26KOQPRtM?rel=0&controls=0&showinfo=0&autoplay=1"><span class="blind">애니메이션영상보기"</span></button>-->
+                            </dt>
+                            <dd><span class="blind">게임플레이</span></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--section_3:사전등록-->
+            <div class="section section_3">
+                <div class="inner">
+                    <h2><span class="blind">런칭 사전예약: 예약기간:2017.05.25~런칭시점까지</span></h2>
+                    <div class="wrap_reg">
+                        <ul class="devicelist">
+                            <li>
+                                <!--안드로이드디바이스에checked-->
+                                <input type="radio" name="agr" id="deviceChk1" value="" checked="checked">
+                                <label class=" radio_label" for="deviceChk1"><span class="blind">google play</span></label>
+                            </li>
+                            <li>
+                                <input type="radio" name="agr" id="deviceChk2" value="">
+                                <label class="radio_label device_2" for="deviceChk2"><span class="blind">apple app store</span></label>
+                            </li>
+                        </ul>
+                        <div class="phone">
+                            <label for="phoneNum" class="blind">휴대폰번호입력</label>
+                            <span class="num010">010 - </span>
+                            <input for="phoneNum" type="text" name="name" value="" class="input_placeHolder inp_bg_on" data-numberonly="true" data-placeholderclass="inp_bg_on" title="휴대폰번호숫자만입력해주세요">
+                        </div>
+                        <ul class="agreelist">
+                            <li>
+                                <input type="checkbox" name="agr" id="agreeChk1" value="">
+                                <label class="checkbox_label" for="agreeChk1"><span class="blind">개인정보 수집 및 이용 동의</span></label>
+                                <a class="view_detail" data-toshow="msg_4" href="#" onclick="alertPopup.show('msg_4'); return false;"><span class="blind">개인정보 수집 및 이용 동의 자세히보기(팝업)</span></a>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="agr" id="agreeChk2" value="">
+                                <label class="checkbox_label txt_2" for="agreeChk2"><span class="blind">개인정보 처리 위탁 동의</span></label>
+                                <a class="view_detail detail_2" data-toshow="msg_5" href="#" onclick="alertPopup.show('msg_5'); return false;"><span class="blind">개인정보처리 위탁 동의 자세히보기(팝업)</span></a>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="agr" id="agreeChk3" value="">
+                                <label class="checkbox_label txt_3" for="agreeChk3"><span class="blind">광고문자 수신동의</span></label>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn_reg" onclick="alertPopup.show('msg_3'); return false;"><span class="blind">사전예약 신청하기</span></button>
+                    </div>
+                </div>
+            </div>
+            <!--section_4:게임틀징-->
+            <div class="section section_4">
+                <div class="inner">
+                    <h2>
+                        <span class="blind">특징</span>
+                    </h2>
+                    <ul class="feature">
+                        <li class="blind">
+                            세계최초,pc/모바일크로스!-pc에서도,모바일에서도어떤플랫폼에서도
+                            제약없이플레이가능합니다.5대PVP게임역사상세계최초로 구현된,플랫폼초원 무제한
+                            전장으로 당신을 초대합니다.
+                        </li>
+                        <li class="blind">
+                            전략적 재미! 다이나믹 쿨다운 시스템
+                            실시간 전투 속에서 각각의 행동 뒤에 전술/전략적 재미를 극대화시켜줄, 쿨다운 타임이 주어집니다.
+                        </li>
+                        <li class="blind">
+                            글로벌 스탠다드 “점령전” 게임 방식
+                            제한된 시간, 맵 거점을 더 많이 점령하면서 상대팀을 섬멸하세요! 우리팀 팀원들과의 호흡이,
+                            한순간에 전황을 역전으로 이끕니다.
+                        </li>
+                        <li class="blind">
+                            오직 실력! 당신의 실력을 보여주세요~
+                            No 강화, No 합성, No 진화
+                            순수한 실력만이 지배하는 진정한 PVP 게임입니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--section_5:캐릭터-->
+            <div class="section section_5">
+                <div class="inner">
+                    <h2>
+                        <span class="blind">16명의캐릭터</span>
+                    </h2>
+                    <ul class="game-slide">
+                        <li class="img1 img"><span class="blind">"바이커" </span></li>
+                        <li class="img2 img"><span class="blind">"파이로" </span></li>
+                        <li class="img3 img"><span class="blind">"바운티헌터" </span></li>
+                        <li class="img4 img"><span class="blind">"드레곤" </span></li>
+                        <li class="img5 img"><span class="blind">"헌트레스" </span></li>
+                        <li class="img6 img"><span class="blind">"어쌔신" </span></li>
+                        <li class="img7 img"><span class="blind">"더블에이전트" </span></li>
+                        <li class="img8 img"><span class="blind">"쉐도우" </span></li>
+                        <li class="img9 img"><span class="blind">"블랙스미스" </span></li>
+                        <li class="img10 img"><span class="blind">"고스트" </span></li>
+                        <li class="img11 img"><span class="blind">"그레너이더" </span></li>
+                        <li class="img12 img"><span class="blind">"폭스" </span></li>
+                        <li class="img13 img"><span class="blind">"데모" </span></li>
+                        <li class="img14 img"><span class="blind">"스왓" </span></li>
+                        <li class="img15 img"><span class="blind">"인스펙터" </span></li>
+                        <li class="img16 img"><span class="blind">"코만도" </span></li>
+                    </ul>
+                    <div class="game-slide-buttons">
+                        <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button">Previous</button>
+                        <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button">Next</button>
+                    </div>
+                </div>
+            </div>
+            <!--section_6:이벤트-->
+            <div class="section section_6">
+                <div class="inner">
+                    <h2>
+                        <img src="Contents/images/mobile/title_event.png" alt="스페셜런칭이벤트(모든이벤트는 중복보상이가능합니다.)" />
+                    </h2>
+                    <div class="event1 adjustCenter">
+                        <img src="Contents/images/pc/txt_evt1.png" />
+                        <span class="blind">
+                            1EVENT:14일동안, 매일매일 넥슨캐시 1,000을 드려요!
+                            탱고파이브는5라운드3선승제로승리/패배하게됩니다.
+                            라운드승리를할때마다승리의증거로윈코인을1개씩드립니다.
+                            매일매일,윈코인 10개 획득하면
+                            모든 분께 넥슨캐시 1,000을
+                            그냥 드립니다.
+                            Bonus!이벤트 기간동안,300윈코인 모으시면
+                            묻지도 따지지도 않고 추가 보너스 넥슨캐시 3,000 을
+                            더 드립니다!
+                            EVENT1 기간] 런칭일 포함하여 2주 동안
+                        </span>
+                    </div>
+                    <div class="event2 adjustCenter">
+                        <img src="Contents/images/mobile/txt_evt2.png" />
+                        <span class="blind">
+                            2EVENT랭커에도전하라!총상금1억원상당경품받아가세요!
+                            1등그래픽카드 1080TI아이패드9.76~7등 1000000넥슨캐시101~500등30000넥슨캐시
+                            501~2000등20000넥슨캐시2001~5000등10000넥슨캐시
+                            [EVENT2 기간] 런칭일 포함하여 2주간, 2 SEASON
+                        </span>
+                    </div>
+                    <p class="note1">
+                        <img src="Contents/images/mobile/txt_note1.png" alt="잠깐!런칭이벤트는 넥슨계정으로 플레이하시거나,넥슨계정으로 추가연동해야 참여가능합니다." />
+                    </p>
+                </div>
+            </div>
+            <!--section_7:유의사항-->
+            <div class="section section_7">
+                <div class="inner">
+                    <h2>
+                        <span class="blind">유의사항</span>
+                    </h2>
+                    <p class="notice1">
+                        <img src="Contents/images/mobile/txt_notice1.gif" />
+                        <span class="blind">
+                            런칭 사전 예약 유의사항
+                            런칭 시점에 신청하신 휴대폰 번호로 문자(LMS)를 통해 안내 드립니다. 등록하신 휴대론 번호로 넥슨 게임 정보가 안내되며, 넥슨 LMS 수신거부 시 넥슨에서 발송되는
+                            모든 LMS를 받으실 수 없습니다.
+                            전화번호를 잘못 입력하거나, 스팸 기능 설정으로 인해 발생하는 불이익에 대해서는 별도 도움을 드리기 어렵습니다.
+                            이미 “CBT 사전 예약” 신청하셨던 분들께는 자동으로 런칭 안내를 드립니다.
+                        </span>
+                    </p>
+                    <p class="notice2">
+                        <img src="Contents/images/mobile/txt_notice2.gif" />
+                        <span class="blind">
+                            런칭 이벤트 유의사항
+                            이벤트1과 이벤트2는 중복 당첨이 가능합니다.
+                            이벤트2는 각 시즌별로 중복 당첨이 가능합니다. SEASON1 랭커가 SEASON2 랭커 달성시에, 각각 경품이 지급됩니다.
+                            넥슨닷컴 계정으로 플레이하거나 넥슨닷컴 계정을 연동해야 보상을 받을 수 있습니다. 여러 개의 넥슨닷컴 계정으로 플레이할 시에는, 시즌 마지막 경기 플레이 이력이 있는
+                            넥슨닷컴 계정으로 보상이 지급됩니다.
+                            넥슨 캐시는 해당 넥슨닷컴 계정으로 이벤트 시즌이 종료된 이후에 자동 지급 됩니다.
+                            이벤트별 당첨자는 해당 이벤트 종료 후, 공식 카페에서 당첨자 리스트 확인할 수 있습니다.
+                            비정상적인 방법으로 이벤트에 참여한 경우, 당첨이 취소될 수 있습니다.
+                            이벤트 경품 이미지는 실제와 다를 수 있으며, 경품 및 진행 일정은 내부 사정에 의해 변경될 수 있습니다.
+                            타인 휴대폰 번호 도용시 형사처벌의 대상이 될 수 있습니다.
+                            참여자가 작성한 정보가 정확하지 않아 발생하는 참여자의 불이익에 대해서 당사는 책임을 지지 않습니다.
+                            만 14세 미만 미성년자의 경우 이벤트에 참여할 수 없으며, 참가 시 당첨이 취소될 수 있습니다.
+                            현물 상품 당첨 시 개인 정보 수집 이용에 동의한 경우에만 상품 배송이 진행되며, 본인 부담 제세공과금 22%가 발생됩니다. 현물 상품 배송 및 제반 업무 처리를 위해
+                            개인 정보가 배송업체에 전달될 수 있습니다.
+                            당첨 발표 후, 안내드린 일정까지 제세공과금과 경품 배송에 필요한 정보를 접수하지 않은 경우 당첨이 취소될 수 있습니다.
+                        </span>
+                </div>
+            </div>
+            <!--section_8:넥슨연동가이드-->
+            <div class="section section_8">
+                <div class="inner">
+                    <h2>
+                        <span class="blind">넥슨계정연동가이드</span>
+                    </h2>
+                    <p class="guide">
+                        <span class="blind">
+                            넥슨계정 연동가이드
+                            Case1 > PC로만 게임할 경우
+                            PC 로그인 자체가 넥슨계정
+                            이므로, 그대로 이용하시면 자동 참여됩니다.
+                            Case2 > 모바일에서 게임하다가, PC에서도 할 경우
+                            (1) PC 버전을 설치합니다.
+                            (2) 모바일에서 SNS 연동 완료되어 있는지 확인합니다. 게스트 상태라면 연동해주세요~
+                            (3) 모바일 설정에서 “PC에 입력할 인증코드 생성”을 눌러주세요
+                            (4) PC 설정에서 해당 인증코드 입력합니다. > 끝
+                            Case3 > PC에서 게임하다가, 모바일로 할 경우
+                            (1) 모바일 버전을 설치합니다.
+                            (2) 모바일 설정에서 “PC에서 생성한 캐릭터 가져오기”를 눌러주세요
+                            (3) 로그아웃 하시고, “넥슨계정”으로 다시 로그인하세요. > 끝
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="inner">
+                <div class="f_logo">
+                    <a href="http://www.nexon.com/" target="_blank" class="logo"><span class="blind">넥슨 로고</span></a>
+                    <a href="#" target="_blank" class="thingsoft" title="thingsoft"><span class="blind">thingsoft</span></a>
+                </div>
+                <span class="copyright"></span>
+            </div>
+        </footer>
+    </div>
+    <!-- //Wrap -->
+    <!--popup-->
+    <div class="alertPop popup">
+        <div class="popup_layer"></div>
+        <div class="popup_inner keep-middle">
+            <!--사전예약중입니다.-->
+            <div class="msg msg_1">
+                <p class="comment"><strong>지금은 사전예약 기간 중입니다.</strong></p>
+                <p class="sub_comment"><span>정식 오픈 이후 이용 가능합니다.</span></p>
+                <button type="button" data-tohide="msg_1" class="btn_confirm">확인</button>
+            </div>
+            <!--게임플레이영상은추후공개합니다.-->
+            <div class="msg msg_2">
+                <p class="comment"><strong>게임 플레이 영상은 추후 공개 예정입니다.</strong></p>
+                <p class="sub_comment"><span>조금만 기다려주세요~ </span></p>
+                <button type="button" data-tohide="msg_2" class="btn_confirm">확인</button>
+            </div>
+            <!--참여해주셔서감사합니다.-->
+            <div class="msg msg_3">
+                <p class="comment"><strong>참여해 주셔서 감사합니다.</strong></p>
+                <p class="sub_comment"><span>[넥슨] YYYY.MM.DD에 광고 문자 수신 동의가 처리되었습니다. </span></p>
+                <button type="button" data-tohide="msg_3" class="btn_confirm">확인</button>
+            </div>
+            <!--개인정보수집이용동의안내-->
+            <div class="msg msg_4">
+                <h3>개인 정보 수집 및 이용 동의 안내</h3>
+                <p>㈜넥슨코리아는 게임 정보 및 이벤트 정보 안내를 위해 다음과 같이 개인정보를 수집하고 있습니다.</p>
+                <ul class="policy">
+                    <li>
+                        &ndash; 개인정보의 수집 및 이용목적: 게임 정보 및 이벤트 정보 안내
+                    </li>
+                    <li>
+                        &ndash; 수집하는 개인정보의 항목: 휴대폰번호
+                    </li>
+                    <li>
+                        &ndash; 개인정보의 보유 및 이용기간: 수집일로부터 1년
+                    </li>
+                </ul>
+                <p>
+                    이용자는 본 동의를 거부할 권리가 있습니다.<br />
+                    단, 동의를 거부하는 경우 게임 정보 및 이벤트 정보 안내 문자를 받을 수 없습니다.
+                </p>
+                <button type="button" data-tohide="msg_4" class="btn_confirm">확인</button>
+            </div>
+            <!--개인정보처리위탁-->
+            <div class="msg msg_5">
+                <h3>개인정보 처리 위탁 동의 안내</h3>
+                <p>㈜넥슨코리아는 게임 정보 제공을 위해 다음과 같이 개인정보를 위탁합니다.</p>
+                <ul class="policy">
+                    <li>
+                        &ndash; 개인정보 위탁 업체: ㈜넥슨네트웍스
+                    </li>
+                    <li>
+                        &ndash; 개인정보 위탁 목적: 게임 정보 안내 및 고객문의 처리
+                    </li>
+                    <li class="pdt">
+                        &ndash; 개인정보 위탁 업체: ㈜다우기술
+                    </li>
+                    <li>
+                        &ndash; 개인정보 위탁 목적: 게임 정보 및 이벤트 정보 안내를 위한 문자 발송
+                    </li>
+                </ul>
+                <button type="button" data-tohide="msg_5" class="btn_confirm">확인</button>
+            </div>
+            <!--이벤트레이어팝업-->
+            <div class="wrap_event_popup">
+                <div class="msg msg_6">
+                    <!--width = "" , height = "" :: 실제이미지크기의절반값입력-->
+                    <div class="inner_content" style="width:320px;height:690px">
+                        <img src="Contents/images/mobile/test.jpg" alt="이벤트내용"/>
+                    </div>
+                </div>
+                <button type="button" data-tohide="msg_6" class="btn_eventConfirm btn_confirm">닫기</button>
+            </div>
+        </div>
+    </div>
+    <!--//popup-->
+    <div class="shadow"></div>
+</body>
+</html>

@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty Warriors: Unleashed</title>
+    <link rel="shortcut icon" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="stylesheet" href="Contents/css/style.css">
+    <script src="Contents/js/jquery-1.12.4.min.js"></script>
+    <script src="Contents/js/jquery.localLinker.js"></script>
+    <script src="Contents/js/TweenMax.min.js"></script>
+    <script src="Contents/js/TimelineMax.min.js"></script>
+    <script src="Contents/js/swiper.jquery.min.js"></script>
+    <script src="Contents/js/ui.jinsam.js"></script>
+</head>
+<body class="vn">
+    <!--gallery slider-->
+    <div class="pop_slide" id="popGallery">
+        <div class="swiper-container" id="s1">
+            <div class="layer"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+            </div>
+            <div class="swiper-indexer">
+                <!--총 이미지 갯수는 수동으로 마크업(number클래스)-->
+                <span class="active">1</span>/<span class="number">4</span>
+            </div>
+        </div>
+        <div class="wrap_swiper_bottons">
+            <div class="s1_next swiper-button-next swiper-button-white"></div>
+            <div class="s1_prev swiper-button-prev swiper-button-white"></div>
+        </div>
+    </div>
+    <!--//gallery slider-->
+    <!--movie slider-->
+    <div class="wrap_pop_slide">
+        <div class="pop_slide" id="popMovie">
+            <div class="swiper-container" id="s2">
+                <div class="layer"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_1.png" alt="" />
+                        <div class="nation1 description">
+                            <h3>Nước Ngụy (魏)</h3>
+                            <p class="ment">“Mãi trung thành với Hoàng Đế,<br/>Người sẽ không bao giờ phụ ta!”</p>
+                            <p>
+                                Tào Tháo trị vì nước Ngụy<br />
+                                bằng uy quyền và nguyên tắc.<br />
+                                Chiến binh tinh nhuệ và sách lược xảo quyệt<br />
+                                là những vũ khí khiến đối phương phải kiêng dè..
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_2.png" alt="" />
+                        <div class="nation2 description">
+                            <h3>Nước Thục (蜀)</h3>
+                            <p class="ment">
+                                “Dẫu ta không sinh cùng ngày,<br/>
+                                nhưng nguyện chết cùng ngày!!”
+                            </p>
+                            <p>
+                                Anh em trên thuận dưới hòa và niềm hi vọng bất diệt<br />
+                                là động lực chiến đấu của nước Thục. Lưu Bị, người có lòng từ bi,<br />
+                                độ lượng luôn sát cánh với Ngũ Hổ tướng,<br/>
+                                những bậc anh hùng một mình địch lại trăm quân.
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_3.png" alt="" />
+                        <div class="nation3 description">
+                            <h3>Nước Ngô (吳)</h3>
+                            <p class="ment">
+                                “Ta là đệ nhất thiên hạ!<br/>
+                                Chính ta sẽ thống lĩnh mảnh đất này!”
+                            </p>
+                            <p>
+                                Nước Ngô là quê hương của các chiến binh tài giỏi, dũng cảm,<br/>
+                                nức tiếng gần xa nhờ biệt tài thủy chiến vô song.<br />
+                                Tôn Quyền trị vì vương quốc phồn vinh này<br />
+                                để hoàn thành tâm nguyện của phụ thân và đại huynh.
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="wrap_swiper_bottons">
+                <div class="s2_next swiper-button-next swiper-button-white"></div>
+                <div class="s2_prev swiper-button-prev swiper-button-white"></div>
+            </div>
+        </div>
+    </div>
+    <!--//movie slider-->
+    <!-- Wrap -->
+    <div id="wrap" class="en">
+        <!-- Header -->
+        <div id="header">
+            <h1><button type="button" class="logo"><img src="Contents/images/pc/logo_global.png" alt="Dynasty Warriors: Unleashed"></button></h1>
+            <div id="nav">
+                <div class="border"></div>
+                <ul class="menu locallinker">
+                    <li class="menu1 active" data-href=".section_main"><button type="button"><span class="blind">main</span></button></li>
+                    <li class="menu2" data-href=".section1"><button type="button">Đăng ký trước</button></li>
+                    <li class="menu3" data-href=".section2"><button type="button">Cộng đồng</button></li>
+                    <li class="menu4" data-href=".section3"><button type="button">Game</button></li>
+                </ul>
+                <ul class="share">
+                    <li>
+                        <button type="button"><span class="blind">open sns list</span></button>
+                        <ul class="sns_list">
+                            <li class="facebook"><button type="button"><span class="blind">facebook</span></button></li>
+                            <li class="tweeter"><button type="button"><span class="blind">tweeter</span></button></li>
+                            <li class="instagram"><button type="button"><span class="blind">instargram</span></button></li>
+                            <li class="snapchat"><button type="button"><span class="blind">snapchat</span></button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //Header -->
+        <!-- Container -->
+        <div id="container">
+            <div class="section_main section">
+                <div class="bg_cloud"></div>
+                <div class="obj_wizard"></div>
+                <div class="inner">
+                    <h2><span class="blind">Cuối cùng,<br/>Kiệt tác Độc Tôn đã tái xuất! </span></h2>
+                    <div class="hovershow">
+                        <button type="button" class="btn_play" data-video="mMHr7vGATdo" onclick=""><img class="visible" src="Contents/images/pc/btn_mov_obj.png" alt="Play Video"></button>
+                        <p class="txt_playtrailer show-comment">PHÁT ĐOẠN PHIM QUẢNG CÁO</p>
+                    </div>
+                    <ul class="features">
+                        <li><span>Các nhân vật yêu thích đã tái xuất</span></li>
+                        <li><span>Những trận chiến đậm chất sử thi chống lại kẻ thù truyền kiếp</span></li>
+                        <li><span>Binh khí cách điệu nhưng đầy uy lực</span></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn_scroll">View Contents</button>
+                <div class="video_box">
+                    <div class="cover_layer"></div>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rzSO4BX3cJQ?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;hq=720&amp;playlist=rzSO4BX3cJQ;" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="section section1">
+                <div class="inner">
+                    <h2><strong>ĐỪNG BỎ LỠ LỄ VẬT </strong></h2>
+                    <p>Được nhận phần thưởng trong game trị giá 29,99 usd!</p>
+                    <div class="image_spot"></div>
+                    <p class="comment">Lã Bố 3 sao / 1.000 kim ngân bảo / 100 Bánh bao AP (S) / 50.000 Xu</p>
+                    <!--정보입력area-->
+                    <div class="bg_registerbox">
+                        <form action="#" method="post">
+                            <fieldset>
+                                <div class="email">
+                                    <p><label for="userEmail">Địa chỉ email</label></p>
+                                    <input id="userEmail" type="email" name="name" placeholder="Vui lòng nhập email">
+                                </div>
+                                <ul class="agree">
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk1" value="">
+                                        <label for="agreeChk1">Khi chọn hộp này, các hạ đồng ý với <a class="comment" href="#" target="_blank">Điều khoản Dịch </a>vụ và <a class="comment" href="#" target="_blank">Chính sách Bảo mật.</a></label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk2" value="">
+                                        <label for="agreeChk2">[Tùy chọn] Đồng ý nhận thông tin và tài liệu tiếp thị qua email.(Có thể hủy đăng ký bất cứ lúc nào)</label>
+
+                                    </li>
+                                </ul>
+                                <p class="comment">
+                                    ※ Yêu cầu thiết bị có hiệu năng tương đương hoặc lớn hơn
+                                    Galaxy S4 hoặc iphone5s (iOS 9 trở lên) để chạy game.
+                                </p>
+                                <ul class="row_2_buttons">
+                                    <li class="row_1"><button type="button" id="btnReg" class="btn_pre_register"><span>Đăng ký trước NGAY</span></button></li>
+                                    <li class="row_2"><button type="button" class="btn_google"><span class="blind">googleplay</span> <span class="google_txt">Đăng ký trước tại </span></button><p class="">Đăng ký trước tại Google Play & nhận xx.xxx  Xu</p></li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--정보입력area//-->
+                </div>
+                <img src="Contents/images/pc/obj_char3.png" alt="" class="obj4">
+            </div>
+            <div class="section section2">
+                <div class="obj_girl"></div>
+                <div class="inner">
+                    <h2><strong>GIA NHẬP CỘNG ĐỒNG CHIẾN BINH</strong></h2>
+                    <p>Lưu ý cuộc gọi và hội ngộ với người hâm mộ<br/>Chân Tam Quốc Vô Song khắp thế giới!</p>
+                    <ul class="features">
+                        <li><span>Tin tức game và các bản cập nhật</span></li>
+                        <li><span>Bật mí nội dung đặc sắc và hình ảnh ấn tượng</span></li>
+                        <li><span>Thông tin sự kiện và phần thưởng</span></li>
+                    </ul>
+                    <!--아이프레임삽입 W400px * H300px-->
+                    <div class="ifame_area"> </div>
+                    <!--아이프레임삽입//-->
+                    <button type="button"><span>Cộng đồng Facebook</span></button>
+                </div>
+
+            </div>
+            <div class="section section3">
+                <div class="obj_heroes"></div>
+                <div class="inner">
+                    <h2>
+                        <strong>
+                            CHÂN TAM QUỐC VÔ SONG TÁI HIỆN ĐỘC ĐÁO TRÊN DI ĐỘNG!
+                        </strong>
+                    </h2>
+                    <p>
+                        Các nhân vật huyền thoại sẽ tái xuất để thống nhất tam quốc<br />
+                        Đại chiến khốc liệt bùng nổ giữa những kẻ thù truyền kiếp<br />
+                        Binh khí cách điệu nhưng đầy uy lực
+                    </p>
+                    <ul class="row_2_buttons">
+                        <li class="row_1"><button class="pop_gallery" type="button"><span>Bộ sưu tập</span></button></li>
+                        <li class="row_2"><button class="pop_video" type="button"><span>Phim</span></button></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Footer -->
+            <div id="footer">
+                <div class="inner">
+                    <div class="company_logo"></div>
+                    <ul class="copyright">
+                        <li>&copy; KOEI TECMO GAMES CO., LTD. All rights reserved.</li>
+                        <li>&copy; NEXON Korea Corporation Co., Ltd. All Rights Reserved.</li>
+                        <li>&copy; XPEC Entertainment INC. All rights reserved.</li>
+                    </ul>
+                    <div class="wrap_combobox">
+                        <select class="language">
+                            <option value="">English</option>
+                            <option value="">Korean</option>
+                            <option value="">Chinese</option>
+                            <option value="">Thai</option>
+                            <option value="">French</option>
+                            <option value="">German</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- //Footer -->
+        </div>
+        <!-- //Container -->
+    </div>
+    <!-- //Wrap -->
+    <!--movie popup-->
+    <div class="movPop popup">
+        <div class="layer"></div>
+        <div class="inner">
+            <button type="button" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//movie popup-->
+    <!--popup-->
+    <div class="alertPop popup" id="alertPop">
+        <div class="layer"></div>
+        <div class="inner">
+            <p></p>
+            <button type="button" data-tohide="alertPop" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//popup-->
+</body>
+</html>

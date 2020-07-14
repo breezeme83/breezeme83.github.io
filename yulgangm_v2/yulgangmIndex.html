@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>열혈강호M</title>
+    <link rel="shortcut icon" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="stylesheet" type="text/css" href="Contents/css/style.css">
+    <link rel="stylesheet" type="text/css" href="Contents/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="Contents/css/jquery.fullPage.css" />
+    <script type="text/javascript" src="Contents/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="Contents/js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="Contents/js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="Contents/js/yulgangm.ui.js"></script>
+    <script type="text/javascript" src-="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="Contents/js/slick.js"></script>
+   
+</head>
+<body>
+    <div id="fullpage">
+        <div id="locallinker">
+            <ul>
+                <li class="page_0"><a class="on" href="#"><span class="blind">main</span></a></li>
+                <li class="page_1"><a href="#"><span class="blind">사전예약</span></a></li>
+                <li class="page_2"><a href="#"><span class="blind">EVENT1</span></a></li>
+                <li class="page_3"><a href="#"><span class="blind">EVENT2</span></a></li>
+                <li class="page_4"><a href="#"><span class="blind">게임소개</span></a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <div class="slide" id="section0">
+                <div class="content">
+                    <div class="wrap_bg_video" data-keepplaying>
+                        <div class="dummy"></div>
+                        <div id="videoMain" data-keepplaying></div>
+                    </div>
+                    <h2 class="title">
+                        <img src="Contents/images/pc/h2_title.png" alt="열혈강호M" />
+                    </h2>
+                    <p class="title"><span class="blind">당신이 기다려온 열혈강호 모바일지금 바로 강호인이 되어주세요!</span></p>
+                    <div class="main_video"><a class="btn_play" data-src="https://www.youtube.com/embed/fTOHqN2-XtM?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1" href="#"><img src="Contents/images/pc/btn_play.png" alt="" /></a></div>
+                    <ul class="sns">
+                        <li class="cafe"><a href="#"><img src="Contents/images/pc/link_cafe.png" alt="카페가기" /></a></li>
+                        <li class="facebook"><a href="#"><img src="Contents/images/pc/link_facebook.png" alt="페이스북가기" /></a></li>
+                    </ul>
+                    <div class="obj_main">
+                        <img src="Contents/images/pc/obj_main.png" alt="" />
+                    </div>
+                    <a class="jump_reg" href="#"><span class="blind">지금바로 사전예약</span></a>
+                </div>
+            </div>
+            <div class="slide" id="section1">
+                <div class="content">
+                    <h2 class="register">
+                        <img src="Contents/images/pc/h2_reg.png" alt="열혈강호M사전예약" />
+                    </h2>
+                    <span class="blind">2017년 09월 07일 ~ 런칭 시 / 사전예약 보상!장비경험치 상급아바타</span>
+                    <a class="link_googleplay" href="https://play.google.com/" target="_blank"><span class="blind">구글 플레이 사전예약 시 추가 보상 지급</span></a>
+                    <div class="wrap_reg">
+                        <ul class="devicelist">
+                            <li>
+                                <input type="radio" name="agr" id="deviceChk1" value="" checked="checked">
+                                <label class=" radio_label" for="deviceChk1"><span class="blind">google play</span></label>
+                            </li>
+                            <li>
+                                <input type="radio" name="agr" id="deviceChk2" value="">
+                                <label class="radio_label device_2" for="deviceChk2"><span class="blind">apple app store</span></label>
+                            </li>
+                        </ul>
+                        <div class="phone">
+                            <label for="phoneNum" class="blind">휴대폰번호입력</label>
+                            <span class="num010">010</span>
+                            <input for="phoneNum" type="text" name="name" value="" class="input_placeHolder inp_bg_on" data-numberonly="true" data-placeholderclass="inp_bg_on" title="휴대폰번호숫자만입력해주세요">
+                        </div>
+                        <ul class="agreelist">
+                            <li>
+                                <input type="checkbox" name="agr" id="agreeChk1" value="">
+                                <label class="checkbox_label" for="agreeChk1"><span class="blind">개인정보 수집 및 이용 동의</span></label>
+                                <a class="view_detail" href="#" onclick="alertPopup.show('agree_1'); return false;"><span class="blind">개인정보 수집 및 이용 동의 자세히보기(팝업)</span></a>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="agr" id="agreeChk2" value="">
+                                <label class="checkbox_label txt_2" for="agreeChk2"><span class="blind">개인정보 처리 위탁 동의</span></label>
+                                <a class="view_detail detail_2" href="#" onclick="alertPopup.show('agree_2'); return false;"><span class="blind">개인정보처리 위탁 동의 자세히보기(팝업)</span></a>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="agr" id="agreeChk3" value="">
+                                <label class="checkbox_label txt_3" for="agreeChk3"><span class="blind">광고문자 수신동의</span></label>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn_reg" onclick="alertPopup.show('msg_1'); return false;"><span class="blind">사전예약하기</span></button>
+                        <span class="blind">
+                            안드로이드 유저는 론칭 후 문자로 보상 쿠폰을 보내드립니다.
+                            등록하신 휴대폰 번호로 넥슨 게임 정보를 안내합니다.
+                            동의를 철회하고 싶을 경우, [넥슨홈페이지]-[고객센터]-[모바일]-[열혈강호M] 선택 후
+                            문의를 보내주세요.
+                        </span>
+                        <a href="#" class="notice" onclick="alertPopup.show('reg_notice');"><span class=" blind">유의사항 더보기</span></a>
+                    </div>
+                </div>
+                <p class="footer"><a href="#" class="policy"><span class="blind">개인정보 처리방침</span></a><img src="Contents/images/pc/footer.png" /></p>
+            </div>
+            <div class="slide" id="section2">
+                <div class="content">
+                    <h2 class="event1">
+                        <img src="Contents/images/pc/h2_action.png" alt="진정한 강호인의 열혈액션은?" />
+                    </h2>
+                    <ul class="cards">
+                        <li class="card_1"><a href="#" data-charactor="1"><span class="blind">한비광</span></a></li>
+                        <li class="card_2"><a href="#" data-charactor="2"><span class="blind">담화린</span></a></li>
+                        <li class="card_3"><a href="#" data-charactor="3"><span class="blind">매유진</span></a></li>
+                    </ul>
+                    <button type="button" class="btn_result"><span class="blind">캐릭터를 선택해주세요</span></button>
+                </div>
+            </div>
+            <div class="slide" id="section3">
+                <div class="content">
+                    <h2 class="event">
+                        <img src="Contents/images/pc/h2_cafe.png" alt="열혈강호M공식카페에가입하세요!" />
+                    </h2>
+                    <ul class="event">
+                        <li><img src="Contents/images/pc/img_evt1.png" alt="EVENT1열혈강호를공유하라" /><a class="evt1" href="#" target="_blank"><span class="blind">EVENT1자세히보기</span></a></li>
+                        <li><img src="Contents/images/pc/img_evt2.png" alt="EVENT2공식카페로집결하라" /><a class="evt2" href="#" target="_blank"><span class="blind">EVENT2자세히보기</span></a></li>
+                    </ul>
+                    <button type="button" class="btn_cafe" onclick=""><span class="blind">공식카페 가입하기</span></button>
+                    <a class="link_cafe_notice" href="#" onclick="alertPopup.show('event_notice'); return false;"><span class="blind">이벤트 유의사항</span></a>
+                    <div class="obj_ch1">
+                        <img src="Contents/images/pc/obj_ch1.png" alt="" />
+                    </div>
+                    <div class="obj_ch2">
+                        <img src="Contents/images/pc/obj_ch2.png" alt="" />
+                    </div>
+                    <p class="bg_cafe"><img src=Contents/images/pc/bg_cafe.png alt="" /></p>
+                    <p class="obj_flower_left"><img src="Contents/images/pc/obj_flower_left.png" alt=" " /></p>
+                    <p class="obj_flower_right"><img src="Contents/images/pc/obj_flower_right.png" alt=" " /></p>
+                </div>
+
+
+            </div>
+            <div class="slide" id="section4">
+                <div class="content">
+                    <ul class="tabs">
+                        <li class="tab_1"><a class="on" href="#"><span class="blind">캐릭터소개</span></a></li>
+                        <li class="tab_2"><a href="#"><span class="blind">컨텐츠소개</span></a></li>
+                        <li class="tab_3"><a href="#"><span class="blind">열강M영상</span></a></li>
+                    </ul>
+                    <ul class="show_sceen">
+                        <li id="tab_1" class="wrap_intro">
+                            <ul class="intro_char">
+                                <li id="c_1"><img src="Contents/images/pc/cha_1.jpg" alt="" /><a class="c_movie btn_play" href="#" data-src="https://www.youtube.com/embed/E_2aunrEHXQ?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1"><span class="blind">한비광동영상보기</span></a></li>
+                                <li id="c_2"><img src="Contents/images/pc/cha_2.jpg" alt="" /><a class="c_movie btn_play" href="#" data-src="https://www.youtube.com/embed/fTOHqN2-XtM?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1"><span class="blind">담화린동영상보기</span></a></li>
+                                <li id="c_3"><img src="Contents/images/pc/cha_3.jpg" alt="" /><a class="c_movie btn_play" href="#" data-src="https://www.youtube.com/embed/fTOHqN2-XtM?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1"><span class="blind">매유진동영상보기</span></a></li>
+                            </ul>
+                            <ul class="tabs_c">
+                                <li class="c_1"><a class="on" href="#"><span class="blind">한비광캐릭터</span></a></li>
+                                <li class="c_2"><a href="#"><span class="blind">담화린캐릭터</span></a></li>
+                                <li class="c_3"><a href="#"><span class="blind">매유진캐릭터</span></a></li>
+                            </ul>
+                        </li>
+                        <li id="tab_2" class="wrap_slide">
+                            <ul class="img-slide">
+                                <li><img src="Contents/images/pc/img_1.jpg" alt="image" /></li>
+                                <li><img src="Contents/images/pc/img_2.jpg" alt="image" /></li>
+                                <li><img src="Contents/images/pc/img_3.jpg" alt="image" /></li>
+                                <li><img src="Contents/images/pc/img_1.jpg" alt="image" /></li>
+                                <li><img src="Contents/images/pc/img_3.jpg" alt="image" /></li>
+                            </ul>
+                        </li>
+                        <li id="tab_3" class="wrap_movie">
+                            <div>
+                                <ul class="links">
+                                    <li><a id="bg_1" class="promotion btn_play" href="#" data-src="https://www.youtube.com/embed/E_2aunrEHXQ?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1"><span class="blind">프로모션영상보기</span></a></li>
+                                    <li><a id="bg_2" class="teaser1 btn_play" href="#" data-src="https://www.youtube.com/embed/fTOHqN2-XtM?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1"><span class="blind">티징1무비보기</span></a></li>
+                                    <li><a id="bg_3" class="teaser2 btn_play" href="#" data-src="https://www.youtube.com/embed/E_2aunrEHXQ?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1"><span class="blind">티징2무비보기</span></a></li>
+                                    <li><a id="bg_4" class="teaser3 btn_play" href="#" data-src="https://www.youtube.com/embed/E_2aunrEHXQ?autoplay=1&rel=0&showinfo=0&wmode=opaque&controls=1&enablejsapi=1&origin=http%3A%2F%2Fdn2.nexon.com&widgetid=1"><span class="blind">티징3무비보기</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="obj_flower_left2"><img src="Contents/images/pc/obj_flower_left2.png" alt=" " /></p>
+                    <p class="obj_flower_right2"><img src="Contents/images/pc/obj_flower_right2.png" alt=" " /></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alertPop popup">
+        <div class="popup_layer"></div>
+        <div class="popup_inner keep-middle">
+            <div class="msg msg_1">
+                <p class="comment"><strong> &quot;참여해 주셔서 감사합니다.&quot;</strong></p>
+                <p class="sub_comment"><span>[넥슨] <i>2017.05.15</i>에 <br />광고 문자 수신 동의가 처리되었습니다. </span></p>
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+            <div class="msg agree_1">
+                <img src="Contents/images/pc/agree_1.png" alt="" />
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+            <div class="msg agree_2">
+                <img src="Contents/images/pc/agree_2.png" alt="" />
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+            <div class="msg reg_notice">
+                <img src="Contents/images/pc/reg_notice.png" alt="" />
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+            <div class="msg event_notice">
+                <img src="Contents/images/pc/event_notice.png" alt="" />
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+        </div>
+        <div class="pop_action keep-middle">
+            <div class="msg charactor_1">
+                <img src="Contents/images/pc/action_1.png" alt="" />
+                <button type="button" class="btn_share"><span class="blind">한비광페이스북공유하기</span></button>
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+            <div class="msg charactor_2">
+                <img src="Contents/images/pc/action_2.png" alt="" />
+                <button type="button" class="btn_share"><span class="blind">담화린페이스북공유하기</span></button>
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+            <div class="msg charactor_3">
+                <img src="Contents/images/pc/action_3.png" alt="" />
+                <button type="button" class="btn_share"><span class="blind">매유진페이스북공유하기</span></button>
+                <a class="btn_close msg_close" href="#"><span class="blind">닫기</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="wrap_main_video  v_content  keep-middle">
+    </div>
+    <div class="shadow"></div>
+</body>
+</html>

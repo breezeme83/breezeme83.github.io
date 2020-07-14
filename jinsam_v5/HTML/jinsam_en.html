@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty Warriors: Unleashed</title>
+    <link rel="shortcut icon" href="http://s.nx.com/s2/portal/nexon/image/nexon/nexon.ico">
+    <link rel="stylesheet" href="Contents/css/style.css">
+    <script src="Contents/js/jquery-1.12.4.min.js"></script>
+    <script src="Contents/js/jquery.localLinker.js"></script>
+    <script src="Contents/js/TweenMax.min.js"></script>
+    <script src="Contents/js/TimelineMax.min.js"></script>
+    <script src="Contents/js/swiper.jquery.min.js"></script>
+    <script src="Contents/js/ui.jinsam.js"></script>
+</head>
+<body class="en">
+    <!--gallery slider-->
+    <div class="pop_slide" id="popGallery">
+        <div class="swiper-container" id="s1">
+            <div class="layer"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn_close" data-tohide="popGallery"><span class="blind">close</span></button>
+                    <img src="Contents/images/pc/img2.jpg" alt="" />
+                </div>
+            </div>
+            <div class="swiper-indexer">
+                <!--총 이미지 갯수는 수동으로 마크업(number클래스)-->
+                <span class="active">1</span>/<span class="number">4</span>
+            </div>
+        </div>
+        <div class="wrap_swiper_bottons">
+            <div class="s1_next swiper-button-next swiper-button-white"></div>
+            <div class="s1_prev swiper-button-prev swiper-button-white"></div>
+        </div>
+    </div>
+    <!--//gallery slider-->
+    <!--movie slider-->
+    <div class="wrap_pop_slide">
+        <div class="pop_slide" id="popMovie">
+            <div class="swiper-container" id="s2">
+                <div class="layer"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_1.png" alt="" />
+                        <div class="nation1 description">
+                            <h3>Wei(魏)</h3>
+                            <p class="ment">“Stay loyal to the Emperor,and <br />he will stay loyal to you!”</p>
+                            <p>
+                                Cao Cao leads the Kingdom of Wei with magnetism and principles.<br />
+                                His elite warriors and cunning strategies
+                                are forces to be reckoned with.
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_2.png" alt="" />
+                        <div class="nation2 description">
+                            <h3>Shu(蜀)</h3>
+                            <p class="ment">
+                                “We were born apart,<br />
+                                but we will die together!!”
+                            </p>
+                            <p>
+                                Harmony and hope are the driving forces for the Kingdom of Shu.<br />
+                                The compassionate Liu Bei stands strong with his Five Tiger Generals,<br />
+                                each of whom fights like a hundred men.
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                    <div class="swiper-slide ">
+                        <button class="btn_close" data-tohide="popMovie"><span class="blind">close</span></button>
+                        <img src="Contents/images/pc/img2_3.png" alt="" />
+                        <div class="nation3 description">
+                            <h3>Wu(吳)</h3>
+                            <p class="ment">
+                                “Heaven will not send a brighter star!<br />
+                                We alone can shape this land!”
+                            </p>
+                            <p>
+                                Wu is a kingdom of talented and fearless warriors, known far and wide<br />
+                                for its naval strength. Sun Quan leads this prosperous kingdom<bt />
+                                to fulfill the vision of his father and older brother.
+                            </p>
+                        </div>
+                        <button class="btn_play" data-video="mMHr7vGATdo"></button>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="wrap_swiper_bottons">
+                <div class="s2_next swiper-button-next swiper-button-white"></div>
+                <div class="s2_prev swiper-button-prev swiper-button-white"></div>
+            </div>
+        </div>
+    </div>
+    <!--//movie slider-->
+    <!-- Wrap -->
+    <div id="wrap" class="en">
+        <!-- Header -->
+        <div id="header">
+            <h1><button type="button" class="logo"><img src="Contents/images/pc/logo_global.png" alt="Dynasty Warriors: Unleashed"></button></h1>
+            <div id="nav">
+                <div class="border"></div>
+                <ul class="menu locallinker">
+                    <li class="menu1 active" data-href=".section_main"><button type="button"><span class="blind">main</span></button></li>
+                    <li class="menu2" data-href=".section1"><button type="button">Pre-register</button></li>
+                    <li class="menu3" data-href=".section2"><button type="button">Community</button></li>
+                    <li class="menu4" data-href=".section3"><button type="button">The Game</button></li>
+                </ul>
+                <ul class="share">
+                    <li>
+                        <button type="button"><span class="blind">open sns list</span></button>
+                        <ul class="sns_list">
+                            <li class="facebook"><button type="button"><span class="blind">facebook</span></button></li>
+                            <li class="tweeter"><button type="button"><span class="blind">tweeter</span></button></li>
+                            <li class="instagram"><button type="button"><span class="blind">instargram</span></button></li>
+                            <li class="snapchat"><button type="button"><span class="blind">snapchat</span></button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //Header -->
+        <!-- Container -->
+        <div id="container">
+            <div class="section_main section">
+                <div class="bg_cloud"></div>
+                <div class="obj_wizard"></div>
+                <div class="inner">
+                    <h2><span class="blind">he new Dynasty Warriors.Experience the saga on mobile! </span></h2>
+                    <div class="hovershow">
+                        <button type="button" class="btn_play" data-video="mMHr7vGATdo" onclick=""><img class="visible" src="Contents/images/pc/btn_mov_obj.png" alt="Play Video"></button>
+                        <p class="txt_playtrailer show-comment">PLAY TRAILER</p>
+                    </div>
+                    <ul class="features">
+                        <li><span>Your favourite characters return</span></li>
+                        <li><span>Epic battles against relentless hordes</span></li>
+                        <li><span>Stylized yet brutal weapons</span></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn_scroll">View Contents</button>
+                <div class="video_box">
+                    <div class="cover_layer"></div>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rzSO4BX3cJQ?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;hq=720&amp;playlist=rzSO4BX3cJQ;" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="section section1">
+                <div class="inner">
+                    <h2><strong>DO NOT MISS YOUR GIFT!</strong></h2>
+                    <p>$29.99 worth of in-game bonus items!</p>
+                    <div class="image_spot"></div>
+                    <p class="comment">Lu Bu  /  1,000 ingot  /  100 AP Baozi  /  50,000 Coins</p>
+                    <!--정보입력area-->
+                    <div class="bg_registerbox">
+                        <form action="#" method="post">
+                            <fieldset>
+                                <div class="email">
+                                    <p><label for="userEmail">Email Address</label></p>
+                                    <input id="userEmail" type="email" name="name" placeholder="Please enter your email">
+                                </div>
+                                <ul class="agree">
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk1" value="">
+                                        <label for="agreeChk1">I have read and agree to the Terms of <a class="comment" href="https://m-page.nexon.com/term/10" target="_blank">Service</a> and the <a class="comment" href="https://m-page.nexon.com/term/11" target="_blank">Privacy Policy.</a></label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox" type="checkbox" name="agr" id="agreeChk2" value="">
+                                        <label for="agreeChk2">[Optional] I agree to receive information and marketing materials via email.<br />(You can unsubscribe at any time)</label>
+
+                                    </li>
+                                </ul>
+                                <p class="comment">
+                                    A device with performance equal to or greater than the Galaxy S4 or iphone 5s is required to run the game.
+                                </p>
+                                <ul class="row_2_buttons">
+                                    <li class="row_1"><button type="button" id="btnReg" class="btn_pre_register"><span>Pre-register NOW</span></button></li>
+                                    <li class="row_2"><button type="button" class="btn_google"><span class="blind">googleplay</span> <span class="google_txt">pre-register</span></button><p class="">Pre-register at Google Play & get xxxxx Coins</p></li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--정보입력area//-->
+                </div>
+                <img src="Contents/images/pc/obj_char3.png" alt="" class="obj4">
+            </div>
+            <div class="section section2">
+                <div class="obj_girl"></div>
+                <div class="inner">
+                    <h2><strong>JOIN THE COMMUNITY OF <br />WARRIORS</strong></h2>
+                    <p>Heed the call and unite with <br />Dynasty Warriors fans around the globe!</p>
+                    <ul class="features">
+                        <li><span>Game News and Updates</span></li>
+                        <li><span>Special Reveals and Amazing Artwork</span></li>
+                        <li><span>Event Info and Rewards</span></li>
+                    </ul>
+                    <!--아이프레임삽입 W400px * H300px-->
+                    <div class="ifame_area"> </div>
+                    <!--아이프레임삽입//-->
+                    <button type="button"><span>Facebook Community</span></button>
+                </div>
+
+            </div>
+            <div class="section section3">
+                <div class="obj_heroes"></div>
+                <div class="inner">
+                    <h2>
+                        <strong>
+                            DYNASTY WARRIORS SLASHES ITS<br />
+                            WAY ONTO MOBILE!
+                        </strong>
+                    </h2>
+                    <p>
+                        Legendary characters return to unite the three kingdoms<br />
+                        Massive battles filled with onslaughts of relentless enemies<br />
+                        Stylized yet brutal weapons
+                    </p>
+                    <ul class="row_2_buttons">
+                        <li class="row_1"><button class="pop_gallery" type="button"><span>Gallery</span></button></li>
+                        <li class="row_2"><button class="pop_video" type="button"><span>Movie</span></button></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Footer -->
+            <div id="footer">
+                <div class="inner">
+                    <div class="company_logo"></div>
+                    <ul class="copyright">
+                        <li>&copy; KOEI TECMO GAMES CO., LTD. All rights reserved.</li>
+                        <li>&copy; NEXON Korea Corporation Co., Ltd. All Rights Reserved.</li>
+                        <li>&copy; XPEC Entertainment INC. All rights reserved.</li>
+                    </ul>
+                    <div class="wrap_combobox">
+                        <select class="language">
+                            <option value="">English</option>
+                            <option value="">Korean</option>
+                            <option value="">Chinese</option>
+                            <option value="">Thai</option>
+                            <option value="">French</option>
+                            <option value="">German</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- //Footer -->
+        </div>
+        <!-- //Container -->
+    </div>
+    <!-- //Wrap -->
+    <!--movie popup-->
+    <div class="movPop popup">
+        <div class="layer"></div>
+        <div class="inner">
+            <button type="button" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//movie popup-->
+    <!--popup-->
+    <div class="alertPop popup" id="alertPop">
+        <div class="layer"></div>
+        <div class="inner">
+            <p></p>
+            <button type="button" data-tohide="alertPop" class="btn_close">close</button>
+        </div>
+    </div>
+    <!--//popup-->
+</body>
+</html>
